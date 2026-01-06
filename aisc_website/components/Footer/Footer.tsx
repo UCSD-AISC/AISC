@@ -10,7 +10,7 @@ const Footer = () => {
       {/* Social icons */}
       <div className="flex gap-4">
         <Link
-          href="https://instagram.com"
+          href="https://www.instagram.com/aiscsandiego/?hl=en"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -34,14 +34,14 @@ const Footer = () => {
           />
         </Link>
         <Link
-          href="https://medium.com"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScHfxpdkvfPfUq4ENalf7CNPQ2gGlAJ147BQsZ_DAZZgVO1Mw/viewform"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image src="/icons/vector.png" alt="Medium" width={24} height={24} />
         </Link>
         <Link
-          href="https://discord.com"
+          href="https://discord.gg/Knsq3Cau"
           target="_blank"
           rel="noopener noreferrer"
         >

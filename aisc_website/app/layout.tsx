@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Bai_Jamjuree, Archivo } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +11,18 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const baiJamjuree = Bai_Jamjuree({
+  variable: "--font-bai-jamjuree",
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
+
+const archivo = Archivo({
+  variable: "--font-archivo",
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -52,7 +65,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
+        className={`${geistSans.variable} ${geistMono.variable} ${baiJamjuree.variable} ${archivo.variable} antialiased relative`}
       >
         {/* Nebula Background */}
         <div className="pointer-events-none fixed inset-0 z-[-1] opacity-50 blur-3xl">

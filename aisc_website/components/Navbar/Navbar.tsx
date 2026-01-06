@@ -2,13 +2,15 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <nav className="bg-transparent px-8 py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between text-white font-semibold tracking-wide text-[18px] w-full">
+      <div className="max-w-7xl mx-auto flex items-center justify-between text-white font-semibold tracking-wide text-[18px] w-full font-[var(--font-bai-jamjuree)]">
         {/* Mobile Menu Button */}
         <button
           className="md:hidden"
@@ -27,27 +29,40 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center w-full">
           <Link href="/" className="relative w-16 h-16 group mr-8">
-            <Image
-              src="/transparent_logo.png"
-              alt="AISC Logo"
-              width={64}
-              height={64}
-              className="absolute transition-opacity duration-300 group-hover:opacity-0"
-            />
-            <Image
-              src="/colored_logo.png"
-              alt="AISC Logo Lit"
-              width={64}
-              height={64}
-              className="absolute transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-            />
+            {pathname === "/" ? (
+              <Image
+                src="/colored_logo.png"
+                alt="AISC Logo"
+                width={64}
+                height={64}
+              />
+            ) : (
+              <>
+                <Image
+                  src="/transparent_logo.png"
+                  alt="AISC Logo"
+                  width={64}
+                  height={64}
+                  className="absolute transition-opacity duration-300 group-hover:opacity-0"
+                />
+                <Image
+                  src="/colored_logo.png"
+                  alt="AISC Logo Lit"
+                  width={64}
+                  height={64}
+                  className="absolute transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                />
+              </>
+            )}
           </Link>
 
           <ul className="flex space-x-8">
             <li>
               <Link
                 href="/about"
-                className="hover:text-purple-400 transition-colors duration-200"
+                className={`${
+                  pathname === "/about" ? "text-purple-400" : ""
+                } hover:text-purple-400 transition-colors duration-200`}
               >
                 ABOUT
               </Link>
@@ -55,7 +70,9 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/initiatives"
-                className="hover:text-purple-400 transition-colors duration-200"
+                className={`${
+                  pathname === "/initiatives" ? "text-purple-400" : ""
+                } hover:text-purple-400 transition-colors duration-200`}
               >
                 INITIATIVES
               </Link>
@@ -63,7 +80,9 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/events"
-                className="hover:text-purple-400 transition-colors duration-200"
+                className={`${
+                  pathname === "/events" ? "text-purple-400" : ""
+                } hover:text-purple-400 transition-colors duration-200`}
               >
                 EVENTS
               </Link>
@@ -84,12 +103,14 @@ const Navbar: React.FC = () => {
 
           <ul>
             <li>
-              <Link
-                href="/get-involved"
+              <a
+                href="https://linktr.ee/aiscucsd"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-purple-400 transition-colors duration-200"
               >
                 GET INVOLVED
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
@@ -97,7 +118,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Slide-out Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-gradient-to-r from-black to-gray-400 z-50 flex flex-col space-y-8 p-8 text-white text-2xl font-bold">
+        <div className="fixed inset-0 bg-gradient-to-r from-black to-gray-400 z-50 flex flex-col space-y-8 p-8 text-white text-2xl font-bold font-[var(--font-bai-jamjuree)]">
           <button
             className="self-start"
             onClick={() => setMobileMenuOpen(false)}
@@ -116,19 +137,25 @@ const Navbar: React.FC = () => {
           </Link>
           <Link
             href="/about"
-            className="hover:text-purple-400 transition-colors duration-200"
+            className={`${
+              pathname === "/about" ? "text-purple-400" : ""
+            } hover:text-purple-400 transition-colors duration-200`}
           >
             ABOUT
           </Link>
           <Link
             href="/initiatives"
-            className="hover:text-purple-400 transition-colors duration-200"
+            className={`${
+              pathname === "/initiatives" ? "text-purple-400" : ""
+            } hover:text-purple-400 transition-colors duration-200`}
           >
             INITIATIVES
           </Link>
           <Link
             href="/events"
-            className="hover:text-purple-400 transition-colors duration-200"
+            className={`${
+              pathname === "/events" ? "text-purple-400" : ""
+            } hover:text-purple-400 transition-colors duration-200`}
           >
             EVENTS
           </Link>
@@ -142,7 +169,9 @@ const Navbar: React.FC = () => {
           </a>
           <Link
             href="/get-involved"
-            className="hover:text-purple-400 transition-colors duration-200"
+            className={`${
+              pathname === "/get-involved" ? "text-purple-400" : ""
+            } hover:text-purple-400 transition-colors duration-200`}
           >
             GET INVOLVED
           </Link>

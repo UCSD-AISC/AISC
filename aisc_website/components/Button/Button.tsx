@@ -15,12 +15,11 @@ const sizeClasses = {
 
 const Button: React.FC<ButtonProps> = ({ text, href, size = "md" }) => {
   return (
-    <Link href={href}>
-      <button
-        className={`border border-white rounded-full text-white hover:bg-white hover:text-black transition ${sizeClasses[size]}`}
-      >
-        {text}
-      </button>
+    <Link
+      href={href}
+      className={`inline-block border border-white rounded-full text-white hover:bg-white hover:text-black transition ${sizeClasses[size]}`}
+    >
+      {text}
     </Link>
   );
 };
