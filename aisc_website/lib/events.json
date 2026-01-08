@@ -1,5 +1,12 @@
 [
   {
+    "status": "Happening",
+    "image": "/EngineersOnTheGreenFlyer.png",
+    "title": "Engineers on the Green",
+    "date": "Thursday, January 8 | 11:00 - 2:30PM PST",
+    "location": "Warren Mall"
+  },
+  {
     "status": "Upcoming",
     "image": "/TapExFlyer.png",
     "title": "TapEx Fundraiser",
