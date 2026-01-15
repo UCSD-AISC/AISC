@@ -4,62 +4,72 @@
     "image": "/EngineersOnTheGreenFlyer.png",
     "title": "Engineers on the Green",
     "date": "Thursday, January 8 | 11:00 - 2:30PM PST",
-    "location": "Warren Mall"
+    "location": "Warren Mall",
+    "countdowntime": "01/15/2026 10:00"
   },
+
   {
     "status": "Upcoming",
     "image": "/TapExFlyer.png",
     "title": "TapEx Fundraiser",
     "date": "Tuesday, May 2 | 7:00 - 9:00PM PST",
-    "location": "Price Center"
+    "location": "Price Center",
+    "countdowntime": "05/02/2026 7:00"
   },
   {
     "status": "Upcoming",
     "image": "/TapExFlyer.png",
     "title": "FedeX Fundraiser",
     "date": "Tuesday, May 2 | 7:00 - 9:00PM PST",
-    "location": "Price Out"
+    "location": "Price Out",
+    "countdowntime": "05/02/2026 7:00"
   },
   {
     "status": "Happening",
     "image": "/TapExFlyer.png",
     "title": "AI Ethics Roundtable",
     "date": "Monday, April 7 | 5:00 - 7:00PM PST",
-    "location": "Center Hall 101"
+    "location": "Center Hall 101",
+    "countdowntime": "04/07/2026 5:00"
   },
   {
     "status": "Happening",
     "image": "/TapExFlyer.png",
     "title": "Tech & Tacos Mixer",
     "date": "Tuesday, April 8 | 6:00 - 8:00PM PST",
-    "location": "Warren Lawn"
+    "location": "Warren Lawn",
+    "countdowntime": "04/08/2026 6:00"
   },
   {
     "status": "Upcoming",
     "image": "/TapExFlyer.png",
     "title": "Machine Learning Workshop",
     "date": "Friday, April 12 | 2:00 - 4:00PM PST",
-    "location": "CSE Building"
+    "location": "CSE Building",
+    "countdowntime": "04/12/2026 2:00"
   },
   {
     "status": "Upcoming",
     "image": "/TapExFlyer.png",
     "title": "Resume Review Night",
     "date": "Wednesday, April 17 | 5:30 - 7:30PM PST",
-    "location": "Price Center East"
+    "location": "Price Center East",
+    "countdowntime": "04/17/2026 5:30"
   },
   {
     "status": "Past",
     "image": "/TapExFlyer.png",
     "title": "Hackathon Kickoff",
     "date": "Saturday, March 10 | 9:00AM - 11:00AM PST",
-    "location": "RIMAC Annex"
+    "location": "RIMAC Annex",
+    "countdowntime": "03/10/2026 9:00"
   },
   {
     "status": "Past",
     "image": "/TapExFlyer.png",
     "title": "AI Social Night",
     "date": "Thursday, March 15 | 6:00 - 9:00PM PST",
-    "location": "Student Center"
+    "location": "Student Center",
+    "countdowntime": "03/15/2026 6:00"
   }
 ]
