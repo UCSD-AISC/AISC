@@ -16,43 +16,6 @@ export default function EventsPage() {
       }
     }
   }, []);
-  
-  // Current form of logging in dates in events.json has some minor problems 
-  // 1) Does not specify AM or PM for start time
-  // 2) If there is a multi-day event, then we cannot log that as we assume that start day and end day are the same
-  // 3) When using the Date() JavaScript object, it sometimes adjusts for Daylight Savings. So, for events in mid-march to early-november, we would need to specify PDT
-  // (or we won't have to worry about this if we just compare the time ourselves after parsing the Date() object with the toLocaleString() function)
-  // 4) Doesn't specify year (Rare edge case where someone logs in an event for january/february next year in december of current year)
-
-  const now = new Date();
-  const year = now.getFullYear();
-  // const testDate = new Date("Saturday, January 17 2026 5:07 PM PST");
-  // If we could write dates in a format similar to this for both start and end time, then this function is a lot easier
-  function dateParser(date: string) {
-    // Example: "date": "Thursday, January 8 | 11:00 - 2:30PM PST"
-    const split = date.split(" | ");
-    const times = split[1].split(" ");
-    const startTime = new Date(split[0]+" "+year+" "+times[0]+" "+times[2].slice(-2)+" PST");
-    const endTime = new Date(split[0]+" "+year+" "+times[2].slice(0,-2)+" "+times[2].slice(-2)+" PST");
-    return [startTime, endTime]
-  }
-
-  for (const event of events) {
-    // Example: "date": "Thursday, January 8 | 11:00 - 2:30PM PST"
-
-    const [startTime, endTime] = dateParser(event.date)
-
-    if (endTime < now) {
-      event.status = 'Past';
-    } else if (now < startTime) {
-      event.status = 'Upcoming';
-    } else {
-      event.status = 'Happening';
-    }
-    
-    // console.log(event)
-  };
-  events.sort((a, b) => dateParser(a.date)[0] - dateParser(b.date)[0]);
 
   return (
     <>
@@ -75,12 +38,11 @@ export default function EventsPage() {
       <section className="space-y-24 mt-12">
         {["Happening", "Upcoming", "Past"].map((category) => {
           const filteredEvents = events.filter(
-            (event) => (event.status === category)
+            (event) => event.status === category
           );
           if (filteredEvents.length === 0) return null;
 
           return (
-            // Bug: Does not scroll when there are too many events and cuts it off; Especially noticeable in different view sizes
             <Fragment key={category}>
               <div>
                 <h2
