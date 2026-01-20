@@ -21,7 +21,6 @@ export default function EventsPage() {
   return (
     <>
       <Navbar />
-      <Countdown />
       <section className="relative min-h-screen flex flex-col-reverse md:flex-row justify-between px-4 py-16 md:py-20 text-white">
         <div className="flex flex-col gap-6 md:flex-row w-full justify-between items-start md:items-end">
           <h1 className="text-white font-semibold text-3xl md:text-5xl font-[var(--font-bai-jamjuree)] leading-snug max-w-4xl text-center md:text-left">

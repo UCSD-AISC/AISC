@@ -1,19 +1,5 @@
 "use client";
 
-/* export type EventItem = {
-    id: string;
-    title: string;
-    startsAt: string;
-    ctaUrl?: string;
-};
-
-type CountdownProps = {
-    days: number;
-    hours: number;
-    minutes: number;
-    isLivedOrPassed: boolean;
-} */
-
 import events from "@/lib/events.json";
 import { useEffect, useState } from "react";
 
