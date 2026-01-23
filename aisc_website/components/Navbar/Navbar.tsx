@@ -69,12 +69,12 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <Link
-                href="/initiatives"
+                href="/projects"
                 className={`${
-                  pathname === "/initiatives" ? "text-purple-400" : ""
+                  pathname === "/projects" ? "text-purple-400" : ""
                 } hover:text-purple-400 transition-colors duration-200`}
               >
-                INITIATIVES
+                PROJECTS
               </Link>
             </li>
             <li>
@@ -144,12 +144,12 @@ const Navbar: React.FC = () => {
             ABOUT
           </Link>
           <Link
-            href="/initiatives"
+            href="/projects"
             className={`${
-              pathname === "/initiatives" ? "text-purple-400" : ""
+              pathname === "/projects" ? "text-purple-400" : ""
             } hover:text-purple-400 transition-colors duration-200`}
           >
-            INITIATIVES
+            PROJECTS
           </Link>
           <Link
             href="/events"
