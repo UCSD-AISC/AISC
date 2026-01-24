@@ -159,6 +159,23 @@ export default function Home() {
           <Button text="VIEW ALL EVENTS" href="/events" size="md" />
         </div>
       </section>
+      <section className="text-white px-10 py-14 font-[var(--font-bai-jamjuree)]">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 inline-block origin-left">
+            Non-Discrimination Policy
+          </h1>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <p className="text-sm leading-relaxed tracking-wide">
+              In accordance with applicable Federal and State law and University policy, AISC does not discriminate, or grant preferences, on the basis of race, color, national origin, religion, sex, gender identity, citizenship, disability, and/or other protected categories. All enrolled students are encouraged to participate in AISC events and activities.
+            </p>
+            <img
+              className="w-32 h-auto flex-shrink-0"
+              src="icons/aisc.png"
+              alt="AISC"
+            />
+          </div>
+        </div>
+      </section>
       <Footer />
     </>
   );
