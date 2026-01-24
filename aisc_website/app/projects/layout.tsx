@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function InitiativesLayout({
+export default function ProjectsLayout({
   children,
 }: {
   children: React.ReactNode;

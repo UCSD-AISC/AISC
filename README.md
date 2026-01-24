@@ -22,7 +22,7 @@ This site is built with:
 - Subtle, animated CSS nebula backgrounds
 - Dynamic events carousel
 - External links & community platforms
-- Clear messaging about our initiatives and mission
+- Clear messaging about our projects and mission
 
 ## Contributing
 

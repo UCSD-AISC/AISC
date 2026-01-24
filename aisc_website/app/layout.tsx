@@ -28,7 +28,7 @@ const archivo = Archivo({
 export const metadata: Metadata = {
   title: "AISC @ UCSD | Artificial Intelligence Student Collective",
   description:
-    "The Artificial Intelligence Student Collective (AISC) at UC San Diego is dedicated to making AI literacy accessible to all through initiatives, events, and community.",
+    "The Artificial Intelligence Student Collective (AISC) at UC San Diego is dedicated to making AI literacy accessible to all through projects, events, and community.",
   openGraph: {
     title: "AISC @ UCSD | Artificial Intelligence Student Collective",
     description:

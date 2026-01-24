@@ -142,14 +142,14 @@ export default function Home() {
         </div>
         <div className="max-w-4xl mx-auto text-center md:text-left">
           <h2 className="text-5xl md:text-6xl font-black text-sky-400 mb-8 leading-tight font-[var(--font-bai-jamjuree)]">
-            THE GRADE <br /> SCHOOL <br /> INITIATIVE
+            THE GRADE <br /> SCHOOL <br /> PROJECT
           </h2>
           <p className="italic text-xl text-white mb-8 font-[var(--font-bai-jamjuree)]">
             Exploring the power of AI with students <br /> in underrepresented
             communities.
           </p>
 
-          <Button text="READ MORE" size="lg" href="/initiatives" />
+          <Button text="READ MORE" size="lg" href="/projects" />
         </div>
       </section>
 
