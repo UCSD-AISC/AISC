@@ -22,7 +22,7 @@ const Footer = () => {
           />
         </Link>
         <Link
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/company/ai-student-collective/posts/?feedView=all"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -34,14 +34,14 @@ const Footer = () => {
           />
         </Link>
         <Link
-          href="https://docs.google.com/forms/d/e/1FAIpQLScHfxpdkvfPfUq4ENalf7CNPQ2gGlAJ147BQsZ_DAZZgVO1Mw/viewform"
+          href="https://github.com/UCSD-AISC"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src="/icons/vector.png" alt="Medium" width={24} height={24} />
+          <Image src="/icons/github.png" alt="Medium" width={24} height={24} />
         </Link>
         <Link
-          href="https://discord.gg/Knsq3Cau"
+          href="https://discord.gg/rjKGEpy7"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -52,7 +52,7 @@ const Footer = () => {
             height={24}
           />
         </Link>
-        <Link href="mailto:contact@aisc.com">
+        <Link href="mailto:aiscsandiego@gmail.com">
           <Image src="/icons/mail.png" alt="Email" width={24} height={24} />
         </Link>
       </div>
