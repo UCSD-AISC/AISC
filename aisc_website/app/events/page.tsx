@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import events from "@/lib/events.json";
 import { useState, useEffect, Fragment } from "react";
+import Countdown from "@/components/Countdown/Countdown";
 
 export default function EventsPage() {
   const [openCategory, setOpenCategory] = useState("");

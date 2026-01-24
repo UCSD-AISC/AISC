@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Button from "@/components/Button/Button";
 import Carousel from "@/components/Carousel/Carousel";
 import Footer from "@/components/Footer/Footer";
+import Countdown from "@/components/Countdown/Countdown";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         </div>
       </section>
 
+      <Countdown />
       <section className="flex flex-col md:flex-row justify-between items-center text-white px-6 md:px-20 py-20 gap-y-12 md:gap-y-0">
         {/* Left Side Text */}
         <div className="md:w-1/2 text-lg leading-relaxed font-[var(--font-bai-jamjuree)]">
