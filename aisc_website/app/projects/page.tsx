@@ -4,7 +4,7 @@ import Footer from "@/components/Footer/Footer";
 import projects from "@/lib/projects.json";
 
 
-export default function InitiativesPage() {
+export default function ProjectsPage() {
   return (
     <>
       <Navbar />

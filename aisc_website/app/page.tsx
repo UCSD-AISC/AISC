@@ -144,14 +144,14 @@ export default function Home() {
         </div>
         <div className="max-w-4xl mx-auto text-center md:text-left">
           <h2 className="text-5xl md:text-6xl font-black text-sky-400 mb-8 leading-tight font-[var(--font-bai-jamjuree)]">
-            THE GRADE <br /> SCHOOL <br /> INITIATIVE
+            THE GRADE <br /> SCHOOL <br /> PROJECT
           </h2>
           <p className="italic text-xl text-white mb-8 font-[var(--font-bai-jamjuree)]">
             Exploring the power of AI with students <br /> in underrepresented
             communities.
           </p>
 
-          <Button text="READ MORE" size="lg" href="/initiatives" />
+          <Button text="READ MORE" size="lg" href="/projects" />
         </div>
       </section>
 
@@ -159,6 +159,23 @@ export default function Home() {
         <Carousel />
         <div className="flex justify-center mt-8 px-4">
           <Button text="VIEW ALL EVENTS" href="/events" size="md" />
+        </div>
+      </section>
+      <section className="text-white px-10 py-14 font-[var(--font-bai-jamjuree)]">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 inline-block origin-left">
+            Non-Discrimination Policy
+          </h1>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <p className="text-sm leading-relaxed tracking-wide">
+              In accordance with applicable Federal and State law and University policy, AISC does not discriminate, or grant preferences, on the basis of race, color, national origin, religion, sex, gender identity, citizenship, disability, and/or other protected categories. All enrolled students are encouraged to participate in AISC events and activities.
+            </p>
+            <img
+              className="w-32 h-auto flex-shrink-0"
+              src="icons/aisc.png"
+              alt="AISC"
+            />
+          </div>
         </div>
       </section>
       <Footer />
