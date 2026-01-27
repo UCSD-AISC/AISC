@@ -1,5 +1,48 @@
 [
   {
+    "index": 0,
+    "title": "Mushroom Edibility Detector",
+    "description": "This project uses computer vision to classify mushrooms as edible or poisonous based on their features",
+    "contributors": [
+      "Shant",
+      "Andrew"
+    ],
+    "stack": "Python",
+    "status": "Active",
+    "difficulty": "easy",
+    "link": "https://github.com/aisc/data-validation-pipeline",
+    "img": "/public/images/mushroom.png"
+  },
+  {
+    "index": 1,
+    "title": "NBA Court Geometry Modeling",
+    "description": "This project uses machine learning to look at NBA analytics and player performances",
+    "contributors": [
+      "Emmanuel",
+      "Anthony"
+    ],
+    "stack": "Python",
+    "status": "Active",
+    "difficulty": "easy",
+    "link": "https://github.com/aisc/data-validation-pipeline",
+    "img": "/public/images/nba.jpg"
+  },
+  {
+    "index": 2,
+    "title": "Machine Learning Interpretability",
+    "description": "This project is focused on Machine Learning Interpretability.",
+    "contributors": [
+      "Shreya",
+      "Lucas"
+    ],
+    "stack": "Python",
+    "status": "Active",
+    "difficulty": "easy",
+    "link": "https://github.com/aisc/data-validation-pipeline",
+    "img": "/public/images/machinelearning.png"
+  },
+  {
+    "index": 3,
     "title": "Data Validation Pipeline",
     "description": "A service that helps people gather image data through crowdsources contributions; composed of UI, NLP pipeline, and Validation pipeline components.",
     "contributors": [
@@ -9,10 +52,14 @@
       "Arnav Kamdar",
       "Caleb Li"
     ],
+    "stack": "Python",
+    "status": "Completed",
+    "difficulty": "medium",
     "link": "https://github.com/aisc/data-validation-pipeline",
     "image": "/education.png"
   },
   {
+    "index": 4,
     "title": "Discord Bot",
     "description": "A reinforcement learning powered bot to help moderate the spam and inappropriate content in the servers it is placed in.",
     "contributors": [
@@ -21,13 +68,20 @@
       "Sophia Fang",
       "Borna Hematty"
     ],
+    "stack": "Python",
+    "status": "Completed",
+    "difficulty": "medium",
     "link": "https://github.com/aisc/discord-bot",
     "image": "/education.png"
   },
   {
+    "index":5,
     "title": "Website Development",
     "description": "The development of this website! It was made with NextJS, Typescript, Tailwind, and love.",
     "contributors": ["Sadrac Santacruz Ibarra", "Rohan Sachdeva"],
+    "stack": "Python",
+    "status": "Completed",
+    "difficulty": "medium",
     "link": "https://github.com/aisc/aisc_website",
     "image": "/education.png"
   }
