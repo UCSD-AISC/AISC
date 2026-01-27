@@ -11,7 +11,7 @@
     "status": "Active",
     "difficulty": "easy",
     "link": "https://github.com/aisc/data-validation-pipeline",
-    "img": "/public/images/mushroom.png"
+    "img": "/mushroom.png"
   },
   {
     "index": 1,
@@ -25,7 +25,7 @@
     "status": "Active",
     "difficulty": "easy",
     "link": "https://github.com/aisc/data-validation-pipeline",
-    "img": "/public/images/nba.jpg"
+    "img": "/nba.jpg"
   },
   {
     "index": 2,
@@ -39,7 +39,7 @@
     "status": "Active",
     "difficulty": "easy",
     "link": "https://github.com/aisc/data-validation-pipeline",
-    "img": "/public/images/machinelearning.png"
+    "img": "/machinelearning.png"
   },
   {
     "index": 3,
@@ -56,7 +56,7 @@
     "status": "Completed",
     "difficulty": "medium",
     "link": "https://github.com/aisc/data-validation-pipeline",
-    "image": "/education.png"
+    "img": "/education.png"
   },
   {
     "index": 4,
@@ -72,7 +72,7 @@
     "status": "Completed",
     "difficulty": "medium",
     "link": "https://github.com/aisc/discord-bot",
-    "image": "/education.png"
+    "img": "/education.png"
   },
   {
     "index":5,
@@ -83,6 +83,6 @@
     "status": "Completed",
     "difficulty": "medium",
     "link": "https://github.com/aisc/aisc_website",
-    "image": "/education.png"
+    "img": "/education.png"
   }
 ]
