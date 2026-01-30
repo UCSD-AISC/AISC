@@ -17,7 +17,7 @@ type project = {
 const Card = (project: project) => {
     
   return (
-      <div className="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs">
+      <div className="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs animate-fade-in">
         <div className="relative w-full h-44 mb-6 rounded-base overflow-hidden">
           <Image
             src={project.img}

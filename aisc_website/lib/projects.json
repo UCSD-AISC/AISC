@@ -84,5 +84,16 @@
     "difficulty": "Medium",
     "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/education.png"
+  },
+  {
+    "index":6,
+    "title": "Website Development",
+    "description": "The development of this website! It was made with NextJS, Typescript, Tailwind, and love.",
+    "contributors": ["Sadrac Santacruz Ibarra", "Rohan Sachdeva"],
+    "stack": "Python",
+    "status": "Recruiting",
+    "difficulty": "Medium",
+    "link": "https://github.com/UCSD-AISC/AISC",
+    "img": "/education.png"
   }
 ]
