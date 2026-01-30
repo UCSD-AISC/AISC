@@ -9,9 +9,9 @@
     ],
     "stack": "Python",
     "status": "Active",
-    "difficulty": "easy",
-    "link": "https://github.com/aisc/data-validation-pipeline",
-    "img": "/mushroom.png"
+    "difficulty": "Easy",
+    "link": "https://github.com/UCSD-AISC/AISC",
+    "img": "/mushroom1.png"
   },
   {
     "index": 1,
@@ -23,8 +23,8 @@
     ],
     "stack": "Python",
     "status": "Active",
-    "difficulty": "easy",
-    "link": "https://github.com/aisc/data-validation-pipeline",
+    "difficulty": "Easy",
+    "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/nba.jpg"
   },
   {
@@ -37,8 +37,8 @@
     ],
     "stack": "Python",
     "status": "Active",
-    "difficulty": "easy",
-    "link": "https://github.com/aisc/data-validation-pipeline",
+    "difficulty": "Easy",
+    "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/machinelearning.png"
   },
   {
@@ -54,8 +54,8 @@
     ],
     "stack": "Python",
     "status": "Completed",
-    "difficulty": "medium",
-    "link": "https://github.com/aisc/data-validation-pipeline",
+    "difficulty": "Medium",
+    "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/education.png"
   },
   {
@@ -70,8 +70,8 @@
     ],
     "stack": "Python",
     "status": "Completed",
-    "difficulty": "medium",
-    "link": "https://github.com/aisc/discord-bot",
+    "difficulty": "Medium",
+    "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/education.png"
   },
   {
@@ -81,8 +81,8 @@
     "contributors": ["Sadrac Santacruz Ibarra", "Rohan Sachdeva"],
     "stack": "Python",
     "status": "Completed",
-    "difficulty": "medium",
-    "link": "https://github.com/aisc/aisc_website",
+    "difficulty": "Medium",
+    "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/education.png"
   }
 ]
