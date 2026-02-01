@@ -21,7 +21,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-5xl font-bold tracking-widest mb-2 font-[var(--font-bai-jamjuree)]">
             ARTIFICIAL INTELLIGENCE STUDENT COLLECTIVE
           </h1>
-          <p className="text-sm md:text-base text-gray-300 mb-4 font-[var(--font-bai-jamjuree)]">
+          <p className="text-sm md:text-base text-gray-50 dark:text-gray-300 mb-4 font-[var(--font-bai-jamjuree)]">
             Powered by Humans For AI
           </p>
           <p className="text-base md:text-lg font-[var(--font-bai-jamjuree)]">
@@ -43,14 +43,14 @@ export default function Home() {
         {/* Right Side Stats */}
         <div className="md:w-1/2 text-right">
           <p className="text-9xl font-bold font-[var(--font-archivo)]">91%</p>
-          <p className="text-xl text-blue-200 mb-6 font-[var(--font-bai-jamjuree)]">
+          <p className="text-xl text-blue-400 dark:text-blue-200 mb-6 font-[var(--font-bai-jamjuree)]">
             OF TECH EXECUTIVES
           </p>
           <p className="text-9xl font-bold font-[var(--font-archivo)]">84%</p>
-          <p className="text-xl text-blue-200 mb-4 font-[var(--font-bai-jamjuree)]">
+          <p className="text-xl text-blue-400 dark:text-blue-200 mb-4 font-[var(--font-bai-jamjuree)]">
             OF THE PUBLIC
           </p>
-          <p className="text-2xl font-bold text-blue-300 leading-tight font-[var(--font-bai-jamjuree)]">
+          <p className="text-2xl font-bold text-blue-400 dark:text-blue-300 leading-tight font-[var(--font-bai-jamjuree)]">
             BELIEVE THAT AI WILL <br />
             CONSTITUTE THE NEXT <br />
             <span className="italic font-extrabold">
@@ -73,13 +73,13 @@ export default function Home() {
         <div className="flex flex-col items-center text-center gap-4 mb-10 md:flex-row md:justify-center md:items-end md:text-right">
           <h2
             className="text-[150px] md:text-[200px] font-black leading-none font-[var(--font-archivo)]"
-            style={{ color: "#20CCF124" }}
+            style={{ color: "var(--yet-only-text-color)" }}
           >
             YET
           </h2>
           <h2
             className="text-[60px] md:text-[100px] font-black leading-none mb-6 font-[var(--font-archivo)]"
-            style={{ color: "#20CCF124" }}
+            style={{ color: "var(--yet-only-text-color)" }}
           >
             ONLY
           </h2>
@@ -91,27 +91,27 @@ export default function Home() {
               <span className="text-5xl">♀️♂️♂️</span>
               <span className="text-5xl font-bold text-white">1 IN 3</span>
             </span>{" "}
-            <span className="text-purple-300 text-xl font-normal font-[var(--font-bai-jamjuree)]">
+            <span className="text-purple-400 dark:text-purple-300 text-xl font-normal font-[var(--font-bai-jamjuree)]">
               of those in data and AI roles are women
             </span>
           </p>
 
           <p className="text-8xl font-bold text-white font-[var(--font-archivo)]">
             5%{" "}
-            <span className="text-purple-300 text-xl font-normal font-[var(--font-bai-jamjuree)]">
+            <span className="text-purple-400 dark:text-purple-300 text-xl font-normal font-[var(--font-bai-jamjuree)]">
               of PhD candidates for AI are black or hispanic
             </span>
           </p>
 
           <p className="text-8xl font-bold text-white font-[var(--font-archivo)]">
             16%{" "}
-            <span className="text-purple-300 text-xl font-normal font-[var(--font-bai-jamjuree)]">
+            <span className="text-purple-400 dark:text-purple-300 text-xl font-normal font-[var(--font-bai-jamjuree)]">
               of Americans are literate in AI
             </span>
           </p>
         </div>
 
-        <p className="text-center mt-12 text-xl font-normal text-gray-300 font-[var(--font-bai-jamjuree)]">
+        <p className="text-center mt-12 text-xl font-normal text-gray-50 dark:text-gray-300 font-[var(--font-bai-jamjuree)]">
           Not everyone has the means to become AI literate, whether it’s due to
           a lack of resources, opportunities, or time.
         </p>
@@ -126,7 +126,7 @@ export default function Home() {
           for students, equipping them to enter the changing workforce and
           world.
         </p>
-        <p className="italic text-gray-300 text-xl font-[var(--font-bai-jamjuree)]">
+        <p className="italic text-gray-50 dark:text-gray-300 text-xl font-[var(--font-bai-jamjuree)]">
           See how we’ve been working towards that…
         </p>
       </section>

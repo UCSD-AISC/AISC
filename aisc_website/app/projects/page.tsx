@@ -15,11 +15,11 @@ export default function ProjectsPage() {
             responsibility of humanity as a whole, not just the discoverer. I am
             a person before I’m an AI technologist.
           </h1>
-          <p className="text-right text-base md:text-lg text-white/70 italic">
+          <p className="text-right text-base md:text-lg text-gray-50 dark:text-white/70 italic">
             — Fei-Fei Li
           </p>
         </div>
-        <p className="mt-16 text-base md:text-lg italic text-white/80 max-w-2xl text-right self-end">
+        <p className="mt-16 text-base md:text-lg italic text-gray-50 dark:text-white/80 max-w-2xl text-right self-end">
           Take a look at our local efforts…
         </p>
       </section>
@@ -41,11 +41,11 @@ export default function ProjectsPage() {
               />
             </div>
             <div className="md:w-1/2 w-full text-white space-y-4 md:space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#4FC3F7]">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--project-title-color)]">
                 {project.title}
               </h2>
-              <p className="text-white/90 text-lg">{project.description}</p>
-              <p className="text-white/70 text-base">
+              <p className="text-white dark:text-white/90 text-lg">{project.description}</p>
+              <p className="text-gray-50 dark:text-white/70 text-base">
                 Contributors: {project.contributors.join(", ")}
               </p>
               <a

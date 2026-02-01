@@ -13,7 +13,7 @@ export default function AboutPage() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-purple-400 leading-tight max-w-5xl mx-auto">
             “AI won’t take away your job – but someone who knows AI might.”
           </h1>
-          <p className="mt-4 text-lg sm:text-xl italic text-purple-300 text-right max-w-5xl mx-auto sm:pr-4">
+          <p className="mt-4 text-lg sm:text-xl italic text-purple-400 dark:text-purple-300 text-right max-w-5xl mx-auto sm:pr-4">
             – Beena Ammanath, Founder of HFAI
           </p>
         </section>
@@ -39,7 +39,7 @@ export default function AboutPage() {
 
         {/* AISC Overview Section */}
         <section className="text-center max-w-5xl">
-          <h2 className="text-4xl font-bold text-cyan-300 mb-4">
+          <h2 className="text-4xl font-bold text-blue-400 dark:text-cyan-300 mb-4">
             The AI Student Collective at UC San Diego
           </h2>
           <p className="text-lg sm:text-xl text-white leading-relaxed">
@@ -54,7 +54,7 @@ export default function AboutPage() {
         {/* GAIN Section */}
         <section className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="max-w-xl text-right">
-            <h3 className="text-6xl font-extrabold text-cyan-300 opacity-70">
+            <h3 className="text-6xl font-extrabold text-blue-400 dark:text-cyan-300 opacity-70">
               GAIN
             </h3>
             <p className="text-white text-3xl mt-4 leading-snug">
@@ -89,7 +89,7 @@ export default function AboutPage() {
         {/* IMPACT Section */}
         <section className="flex flex-col md:flex-row-reverse items-center justify-between gap-12">
           <div className="max-w-xl text-left">
-            <h3 className="text-6xl font-extrabold text-cyan-300 opacity-70">
+            <h3 className="text-6xl font-extrabold text-blue-400 dark:text-cyan-300 opacity-70">
               IMPACT
             </h3>
             <p className="text-white text-3xl mt-4 leading-snug">
@@ -166,7 +166,7 @@ export default function AboutPage() {
               <div key={idx}>
                 <div className="w-40 h-40 bg-gray-700 rounded-full mx-auto mb-4" />
                 <h3 className="text-xl font-bold">{member.name}</h3>
-                <p className="text-sm text-gray-300">{member.role}</p>
+                <p className="text-sm text-gray-50 dark:text-gray-300">{member.role}</p>
               </div>
             ))}
           </div>
