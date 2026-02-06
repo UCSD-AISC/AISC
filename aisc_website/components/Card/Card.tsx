@@ -1,9 +1,8 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 
 type project = {
   title: string;
-  description: string;
+  cardDescription: string;
   contributors: string[];
   link: string;
   stack: string;
@@ -15,9 +14,18 @@ type project = {
 
 
 const Card = (project: project) => {
-    
+  const renderDifficulty = () => {
+      if (project.difficulty === "Easy") {
+        return <p className="text-body mb-6 flex justify-center items-center rounded-full bg-green-600 px-2 w-fit text-white-900">{project.difficulty}</p>;
+      } else if (project.difficulty === "Medium") {
+        return <p className="text-body mb-6 flex justify-center items-center rounded-full bg-yellow-600 px-2 w-fit text-white-900">{project.difficulty}</p>;
+      } else {
+        return <p className="text-body mb-6 flex justify-center items-center rounded-full bg-red-600 px-2 w-fit text-white-900">{project.difficulty}</p>;
+      }
+    };  
   return (
-      <div className="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs animate-fade-in">
+    <div className="flex justify-center">
+      <div className="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-2xl shadow-xs animate-fade-in">
         <div className="relative w-full h-44 mb-6 rounded-base overflow-hidden">
           <Image
             src={project.img}
@@ -26,13 +34,12 @@ const Card = (project: project) => {
             className="object-cover"
           />
         </div>
-        <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">{project.title}</h5>
-        <p className="text-body mb-6">Description: {project.description}</p>
-        <p className="text-body mb-6">Contributors: {project.contributors.join(", ")}</p>
-        <p className="text-body mb-6">Link: <a href={project.link} className="text-brand hover:underline">{project.link}</a></p>
-        <p className="text-body mb-6">Stack: {project.stack}</p>
-        <p className="text-body mb-6">Status: {project.status}</p>
-        <p className="text-body mb-6">Difficulty: {project.difficulty}</p>
+        <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 flex justify-center items-center">{project.title}</h5>
+        <div className="flex flex-row justify-center items-center">
+          {renderDifficulty()}
+        </div>
+        <p className="text-body mb-6 flex justify-center items-center">{project.cardDescription}</p>
+    </div>
     </div>
   );
 }
