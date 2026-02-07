@@ -1,0 +1,49 @@
+[
+  { "name": "Sadrac Santacruz", "role": "President" },
+  { "name": "Rohan Sachdeva", "role": "President-Elect" },
+  { "name": "Kylie Im", "role": "VP Internal" },
+  { "name": "Jiya Makhija", "role": "VP Finance" },
+  { "name": "Rahul Punji", "role": "VP Technology" },
+  { "name": "Tom Ragus", "role": "VP Projects / Education Fellow" },
+  { "name": "Ryan Xavier", "role": "VP Projects" },
+  { "name": "Yuvika Satapathy", "role": "VP External" },
+  { "name": "Divya Vijay", "role": "VP Education" },
+  { "name": "Kala Nguyen ", "role": "VP Events" },
+  { "name": "Borngreat Omoma-Edosa", "role": "VP Outreach" },
+  { "name": "Brandon Hunyh", "role": "VP Media" },
+  { "name": "Ananya Mahadi", "role": "VP Design / Education Fellow" },
+  { "name": "Valmik Nahata", "role": "VP Research / Project Lead" },
+
+  { "name": "Aditya (Adi) Arora", "role": "Project Lead" },
+  { "name": "Emmanuel Viray", "role": "Project Lead" },
+  { "name": "Shant Guedekelian", "role": "Project Lead" },
+  { "name": "Lucas Yan", "role": "Project Lead" },
+
+  { "name": "Shashwat Dudeja", "role": "Software Developer" },
+  { "name": "Toby Chin", "role": "Software Developer / Education Fellow" },
+  { "name": "Karim Barajas", "role": "Software Developer / Education Fellow" },
+  { "name": "Syd Verma ", "role": "Software Developer / Designer" },
+  { "name": "Jaehee Kim", "role": "Software Developer / Education Fellow" },
+  { "name": "Ritvik Mohindru", "role": "Software Developer / Outreach Coordinator" },
+
+  { "name": "Koshik Kumaravel", "role": "Financial Analyst " },
+  { "name": "Kaung Khant", "role": "Financial Analyst " },
+  { "name": "Ethan Huang", "role": "Financial Analyst " },
+
+  { "name": "Varun Kumar ", "role": "Outreach Coordinator / Education Fellow" },
+  { "name": "Ryan Xavier", "role": "Outreach Coordinator" },
+
+  { "name": "Emma Perez", "role": "Designer" },
+
+  { "name": "Chloe Guan ", "role": "Event Coordinator" },
+  { "name": "Rishik Chokhany", "role": "Event Coordinator" },
+
+  { "name": "Sharana Sabesan", "role": "Research Project Team Member / Education Fellow" },
+  { "name": "Ashley Zhou ", "role": "Research Project Team Member / Education Fellow" },
+
+  { "name": "Aditya Singh", "role": "Project Team Member" },
+  { "name": "Andrew Park", "role": "Project Team Member" },
+  { "name": "Toby Zhang", "role": "Project Team Member" },
+  { "name": "Shreya Hiremath", "role": "Project Team Member" },
+  { "name": "Anthony Abumanneh", "role": "Project Team Member / Education Fellow" }
+]

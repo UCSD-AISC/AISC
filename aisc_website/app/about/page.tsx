@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
+import boardMembers from "@/lib/board-members.json";
 
 export default function AboutPage() {
   return (
@@ -135,34 +136,7 @@ export default function AboutPage() {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 justify-items-center">
-            {[
-              { name: "Sadrac Santacruz", role: "President" },
-              { name: "Neil Damle", role: "Vice President" },
-              { name: "Hillary Chang", role: "Vice President" },
-              { name: "Jiya Makhija", role: "Treasurer" },
-              {
-                name: "Rohan Sachdeva",
-                role: "Director of Technical Projects",
-              },
-              {
-                name: "Axel Orrhede",
-                role: "Technical Projects (Extended Board)",
-              },
-              {
-                name: "Yuvika Satapathy",
-                role: "Director of External Affairs",
-              },
-              {
-                name: "Stefanie Zarate",
-                role: "External Affairs (Extended Board)",
-              },
-              {
-                name: "Joseph Guzman",
-                role: "External Affairs (Extended Board)",
-              },
-              { name: "Anisha Ramesh", role: "Marketing & Media Lead" },
-              { name: "Divya Vijay", role: "Co-Director of Education" },
-            ].map((member, idx) => (
+            {boardMembers.map((member, idx) => (
               <div key={idx}>
                 <div className="w-40 h-40 bg-gray-700 rounded-full mx-auto mb-4" />
                 <h3 className="text-xl font-bold">{member.name}</h3>
