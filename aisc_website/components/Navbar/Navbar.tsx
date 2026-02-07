@@ -104,7 +104,7 @@ const Navbar: React.FC = () => {
           <ul>
             <li>
               <a
-                href="https://linktr.ee/aiscucsd"
+                href="https://linktr.ee/aiscsandiego"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-purple-400 transition-colors duration-200"
@@ -168,7 +168,7 @@ const Navbar: React.FC = () => {
             HFAI
           </a>
           <Link
-            href="/get-involved"
+            href="https://linktr.ee/aiscsandiego"
             className={`${
               pathname === "/get-involved" ? "text-purple-400" : ""
             } hover:text-purple-400 transition-colors duration-200`}
