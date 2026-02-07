@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-transparent px-8 py-4">
+    <nav className="bg-transparent px-8 py-4 relative z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between text-white font-semibold tracking-wide text-[18px] w-full font-[var(--font-bai-jamjuree)]">
         {/* Mobile Menu Button */}
         <button
