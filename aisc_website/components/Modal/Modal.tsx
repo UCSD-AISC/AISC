@@ -32,14 +32,14 @@ return(
                         className="object-contain "
                     />
                 </div>
-                <div className="flex flex-row justify-center items-center gap-4">
+                <div className="flex flex-row justify-center items-center gap-4 text-[#ededed]">
                 {input.renderDifficulty(input.difficulty)}
-                <p className="text-body mb-6 flex justify-center items-center rounded-full bg-gray-600 px-2 w-fit text-white-900">{input.stack}</p>
+                <p className="text-body mb-6 flex justify-center items-center rounded-full bg-gray-600 px-2 w-fit">{input.stack}</p>
                 </div>
                 <h3 className="mb-6 mt-2 text-center text-sky-400 text-3xl font-semibold">{input.title}</h3>
-                    <p className="mb-6 text-body leading-9 max-w-2xl mx-auto text-left ml-6 mr-6">{input.modalDescription}</p>
-                <p className="mb-6 text-body">Contributors: {input.contributors.join(", ")}</p>
-                <a href={input.link} className="text-body mb-6 flex justify-center items-center rounded-full hover:scale-[1.1] transition bg-blue-600 px-4 py-2 w-fit text-white-900" target="_blank" rel="noopener noreferrer">View Project</a>
+                    <p className="mb-6 text-body leading-9 max-w-2xl mx-auto text-left ml-6 mr-6 text-[#ededed]">{input.modalDescription}</p>
+                <p className="mb-6 text-body text-[#ededed]">Contributors: {input.contributors.join(", ")}</p>
+                <a href={input.link} className="text-body mb-6 flex justify-center items-center rounded-full hover:scale-[1.1] transition bg-blue-600 px-4 py-2 w-fit text-[#ededed]" target="_blank" rel="noopener noreferrer">View Project</a>
      
             </div>
             </div>

@@ -7,8 +7,7 @@
   --font-geist-mono: "Geist Mono", monospace;
   --font-bai-jamjuree: "Bai Jamjuree", sans-serif;
   --font-archivo: "Archivo", sans-serif;
-  --yet-only-text-color: #59c5ddd5;
-  --project-title-color: #51a6cd;
+  --invert-perc: 85%;
 }
 
 @theme inline {
@@ -22,8 +21,6 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --yet-only-text-color: #20CCF124;
-    --project-title-color: #4FC3F7;
   }
 }
 
