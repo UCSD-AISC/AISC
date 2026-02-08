@@ -1,6 +1,15 @@
 [
   {
-    "status": "Happening",
+    "status": "Upcoming",
+    "image": "/SonataSimonaitis-Boyd.png",
+    "title": "Guest Speaker Sonata Simonaitis-Boyd",
+    "date": "Thursday, February 26 | 5:00 - 6:00PM PST",
+    "location": "RIMAC Conference Room and Zoom",
+    "countdowntime": "02/26/2026 5:00"
+  },
+
+  {
+    "status": "Past",
     "image": "/EngineersOnTheGreenFlyer.png",
     "title": "Engineers on the Green",
     "date": "Thursday, January 8 | 11:00 - 2:30PM PST",
