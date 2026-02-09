@@ -3,6 +3,16 @@ import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
 import boardMembers from "@/lib/board-members.json";
 
+const teams = [
+  "Leadership",
+  "External",
+  "Education",
+  "Events",
+  "Finance",
+  "Projects",
+  "Technology"
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -135,12 +145,32 @@ export default function AboutPage() {
             Meet the Team
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 justify-items-center">
-            {boardMembers.map((member, idx) => (
-              <div key={idx}>
-                <div className="w-40 h-40 bg-gray-700 rounded-full mx-auto mb-4" />
-                <h3 className="text-xl font-bold">{member.name}</h3>
-                <p className="text-sm text-gray-300">{member.role}</p>
+          <div>
+            {teams.map((team, teamIndex) => (
+              <div className="mb-15" key={teamIndex}>
+                <h3 className="text-3xl sm:text-4xl mb-8">{team}</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 justify-items-center">
+                  {boardMembers.map((member, idx) => {
+                    if (member.teams.includes(team)) {
+                      return (
+                        <div key={idx}>
+                          <div className="w-40 h-40 bg-gray-700 rounded-full mx-auto mb-4" />
+                          <h4 className="text-xl font-bold">{member.name}</h4>
+                          <p className="text-sm text-gray-300">
+                            {(team === "Education" || team === "Technology" ? member.roles.toSorted((a, b) => {
+                              if (team === "Education") {
+                                return b === "Education Fellow" ? 1 : -1;
+                              }
+                              else {
+                                return b === "Software Developer" ? 1 : -1;
+                              }
+                            }) : member.roles).join(", ")}
+                          </p>
+                        </div>
+                      );
+                    }
+                  })}
+                </div>
               </div>
             ))}
           </div>
