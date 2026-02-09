@@ -23,9 +23,6 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
   const textColor = getColor("text");
   const bgColor = getColor("bg");
 
-  console.log("textColor:", textColor);
-  console.log("bgColor:", bgColor);
-
   return (
     <nav className="bg-transparent px-8 py-4 relative z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between text-white font-semibold tracking-wide text-[18px] w-full font-[var(--font-bai-jamjuree)]">
