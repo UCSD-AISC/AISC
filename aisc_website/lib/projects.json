@@ -1,7 +1,54 @@
 [
   {
+    "index": 0,
+    "title": "Mushroom Edibility Detector",
+    "cardDescription": "This project uses computer vision to classify mushrooms as edible or poisonous based on their features",
+    "modalDescription": "Ever wondered which mushrooms are safe to eat? This project uses computer vision to classify mushrooms as edible or poisonous based on their features. By analyzing images of mushrooms, we can help foragers and nature enthusiasts make informed decisions about which mushrooms are safe to consume. The model is trained on a dataset of mushroom images, and it learns to identify key characteristics that distinguish edible mushrooms from their poisonous counterparts.",
+    "contributors": [
+      "Shant",
+      "Andrew"
+    ],
+    "stack": "Python",
+    "status": "Active",
+    "difficulty": "Easy",
+    "link": "https://github.com/UCSD-AISC/AISC",
+    "img": "/mushroom1.png"
+  },
+  {
+    "index": 1,
+    "title": "NBA Court Geometry Modeling",
+    "cardDescription": "This project uses machine learning to look at NBA analytics and player performances",
+    "modalDescription": "Ever wondered how NBA players perform on different parts of the court? This project utilizes machine learning to analyze NBA analytics and player performances based on court geometry. By examining player movements and shot data, we can gain insights into how players perform in various areas of the court.",
+    "contributors": [
+      "Emmanuel",
+      "Anthony"
+    ],
+    "stack": "Python",
+    "status": "Active",
+    "difficulty": "Easy",
+    "link": "https://github.com/UCSD-AISC/AISC",
+    "img": "/nba.jpg"
+  },
+  {
+    "index": 2,
+    "title": "Machine Learning Interpretability",
+    "cardDescription": "This project is focused on Machine Learning Interpretability.",
+    "modalDescription": "This project aims to make machine learning models more interpretable and understandable to users. By developing techniques and tools for visualizing and explaining model predictions, we can help users gain insights into how models make decisions and build trust in their outputs.",
+    "contributors": [
+      "Shreya",
+      "Lucas"
+    ],
+    "stack": "Python",
+    "status": "Active",
+    "difficulty": "Easy",
+    "link": "https://github.com/UCSD-AISC/AISC",
+    "img": "/machinelearning.png"
+  },
+  {
+    "index": 3,
     "title": "Data Validation Pipeline",
-    "description": "A service that helps people gather image data through crowdsources contributions; composed of UI, NLP pipeline, and Validation pipeline components.",
+    "cardDescription": "A service that helps people gather image data through crowdsources contributions; composed of UI, NLP pipeline, and Validation pipeline components.",
+    "modalDescription": "This project focuses on building a data validation pipeline to ensure the quality and reliability of image data collected from crowdsourced contributions. The pipeline includes components for user interface design, natural language processing, and data validation to streamline the data collection process.",
     "contributors": [
       "Saarthak Trivedi",
       "Kenzo Ku",
@@ -9,26 +56,51 @@
       "Arnav Kamdar",
       "Caleb Li"
     ],
-    "link": "https://github.com/aisc/data-validation-pipeline",
-    "image": "/education.png"
+    "stack": "Python",
+    "status": "Completed",
+    "difficulty": "Medium",
+    "link": "https://github.com/UCSD-AISC/AISC",
+    "img": "/colored_logo.png"
   },
   {
+    "index": 4,
     "title": "Discord Bot",
-    "description": "A reinforcement learning powered bot to help moderate the spam and inappropriate content in the servers it is placed in.",
+    "cardDescription": "A reinforcement learning powered bot to help moderate the spam and inappropriate content in the servers it is placed in.",
+    "modalDescription": "This project involves creating a Discord bot that uses reinforcement learning to identify and moderate spam and inappropriate content in real-time. By training the bot on various examples of acceptable and unacceptable content, we can help maintain a positive and safe environment for users.",
     "contributors": [
       "Dario Tzeng",
       "Amogh Manjunath",
       "Sophia Fang",
       "Borna Hematty"
     ],
-    "link": "https://github.com/aisc/discord-bot",
-    "image": "/education.png"
+    "stack": "Python",
+    "status": "Completed",
+    "difficulty": "Hard",
+    "link": "https://github.com/UCSD-AISC/AISC",
+    "img": "/colored_logo.png"
   },
   {
+    "index":5,
     "title": "Website Development",
-    "description": "The development of this website! It was made with NextJS, Typescript, Tailwind, and love.",
+    "cardDescription": "The development of this website! It was made with NextJS, Typescript, Tailwind, and love.",
+    "modalDescription": "This project involves our website development! It was made with NextJS, Typescript, Tailwind, and love. The website serves as a platform to showcase our projects, share updates, and connect with the community. It is designed to be user-friendly and visually appealing, providing an engaging experience for visitors.",
     "contributors": ["Sadrac Santacruz Ibarra", "Rohan Sachdeva"],
-    "link": "https://github.com/aisc/aisc_website",
-    "image": "/education.png"
+    "stack": "Python",
+    "status": "Completed",
+    "difficulty": "Medium",
+    "link": "https://github.com/UCSD-AISC/AISC",
+    "img": "/colored_logo.png"
+  },
+  {
+    "index":6,
+    "title": "Website Development",
+    "cardDescription": "The development of this website! It was made with NextJS, Typescript, Tailwind, and love.",
+    "modalDescription": "This project involves our website development! It was made with NextJS, Typescript, Tailwind, and love. The website serves as a platform to showcase our projects, share updates, and connect with the community. It is designed to be user-friendly and visually appealing, providing an engaging experience for visitors.",
+    "contributors": ["Sadrac Santacruz Ibarra", "Rohan Sachdeva"],
+    "stack": "Python",
+    "status": "Recruiting",
+    "difficulty": "Medium",
+    "link": "https://github.com/UCSD-AISC/AISC",
+    "img": "/colored_logo.png"
   }
 ]
