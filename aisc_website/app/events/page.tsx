@@ -21,18 +21,18 @@ export default function EventsPage() {
   return (
     <>
       <Navbar />
-      <section className="relative min-h-screen flex flex-col-reverse md:flex-row justify-between px-4 py-16 md:py-20 text-white">
+      <section className="relative min-h-screen flex flex-col-reverse md:flex-row justify-between px-4 py-16 md:py-20 text-gray-800 dark:text-white">
         <div className="flex flex-col gap-6 md:flex-row w-full justify-between items-start md:items-end">
-          <h1 className="text-white font-semibold text-3xl md:text-5xl font-[var(--font-bai-jamjuree)] leading-snug max-w-4xl text-center md:text-left">
+          <h1 className="font-semibold text-3xl md:text-5xl font-[var(--font-bai-jamjuree)] leading-snug max-w-4xl text-center md:text-left">
             Technology could benefit or hurt people, so the usage of tech is the
             responsibility of humanity as a whole, not just the discoverer. I am
             a person before I’m an AI technologist.
           </h1>
-          <p className="text-center md:text-right text-base md:text-lg text-white/70 italic font-[var(--font-bai-jamjuree)]">
+          <p className="text-center md:text-right text-base md:text-lg text-black dark:text-white/70 italic font-[var(--font-bai-jamjuree)]">
             — Fei-Fei Li
           </p>
         </div>
-        <p className="mt-6 md:mt-10 text-base md:text-lg italic text-white/80 max-w-2xl text-center md:text-right self-center md:self-end font-[var(--font-bai-jamjuree)]">
+        <p className="mt-6 md:mt-10 text-base md:text-lg italic text-black dark:text-white/80 max-w-2xl text-center md:text-right self-center md:self-end font-[var(--font-bai-jamjuree)]">
           Take a look at our local efforts…
         </p>
       </section>
@@ -50,9 +50,9 @@ export default function EventsPage() {
                   onClick={() => setOpenCategory(category)}
                   className={`cursor-pointer text-5xl md:text-6xl font-bold font-[var(--font-bai-jamjuree)] ${
                     openCategory === category
-                      ? "text-[#00BCD4]"
-                      : "text-white/40"
-                  } mb-8 transition-colors duration-300 hover:text-white`}
+                      ? "text-[#00add4] dark:text-[#00BCD4]"
+                      : "text-black/25 dark:text-white/40"
+                  } mb-8 transition-colors duration-300 hover:text-gray-800 dark:hover:text-white`}
                 >
                   {category} Events
                 </h2>
@@ -73,20 +73,20 @@ export default function EventsPage() {
                         } items-center justify-between gap-10 md:gap-20`}
                       >
                         <div
-                          className={`flex-1 text-white max-w-xl ${
+                          className={`flex-1 text-gray-800 dark:text-white max-w-xl ${
                             !isEven ? "md:text-right md:ml-16" : "md:mr-16"
                           }`}
                         >
-                          <p className="text-base md:text-lg uppercase tracking-widest text-white/60 mb-2 font-[var(--font-bai-jamjuree)]">
+                          <p className="text-base md:text-lg uppercase tracking-widest dark:text-white/60 mb-2 font-[var(--font-bai-jamjuree)]">
                             {event.status}
                           </p>
-                          <h3 className="text-4xl md:text-5xl font-bold text-[#ECF0F1] mb-4 font-[var(--font-archivo)]">
+                          <h3 className="text-4xl md:text-5xl font-bold dark:text-[#ECF0F1] mb-4 font-[var(--font-archivo)]">
                             {event.title}
                           </h3>
-                          <p className="mb-2 text-lg md:text-xl text-white/80 font-[var(--font-bai-jamjuree)]">
+                          <p className="mb-2 text-lg md:text-xl dark:text-white/80 font-[var(--font-bai-jamjuree)]">
                             {event.date}
                           </p>
-                          <p className="mb-4 text-lg md:text-xl text-white/70 font-[var(--font-bai-jamjuree)]">
+                          <p className="mb-4 text-lg md:text-xl dark:text-white/70 font-[var(--font-bai-jamjuree)]">
                             {event.location}
                           </p>
                         </div>
@@ -104,7 +104,7 @@ export default function EventsPage() {
                   })}
                 </div>
               </div>
-              <div className="my-12 h-1 w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+              <div className="my-12 h-1 w-full bg-gradient-to-r from-transparent via-black/10 dark:via-white/20 to-transparent" />
             </Fragment>
           );
         })}

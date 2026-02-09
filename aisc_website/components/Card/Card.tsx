@@ -48,7 +48,7 @@ const Card = (project: project) => {
             className="object-contain"
           />
         </div>
-        <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 flex justify-center items-center text-indigo-300
+        <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 flex justify-center items-center text-indigo-400 dark:text-indigo-300
 ">{project.title}</h5>
         <div className="flex flex-row justify-center items-center">
           {renderDifficulty(project.difficulty)}

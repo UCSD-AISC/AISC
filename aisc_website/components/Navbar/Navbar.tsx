@@ -4,9 +4,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  color?: "default" | "white" | "black";
+}
+
+const colors = {
+  default: "_-gray-800 dark:_-white",
+  white: "_-white",
+  black: "_-gray-800",
+}
+
+const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+
+  const getColor = (property: string) => colors[color].replaceAll("_", property);
+
+  const textColor = getColor("text");
+  const bgColor = getColor("bg");
+
+  console.log("textColor:", textColor);
+  console.log("bgColor:", bgColor);
 
   return (
     <nav className="bg-transparent px-8 py-4 relative z-50">
@@ -17,14 +35,14 @@ const Navbar: React.FC = () => {
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
         >
           <div className="space-y-1">
-            <div className="w-8 h-1 bg-white" />
-            <div className="w-8 h-1 bg-white" />
-            <div className="w-8 h-1 bg-white" />
+            <div className={`w-8 h-1 ${bgColor}`} />
+            <div className={`w-8 h-1 ${bgColor}`} />
+            <div className={`w-8 h-1 ${bgColor}`} />
           </div>
         </button>
 
         {/* Logo or Title */}
-        <span className="md:hidden text-lg font-bold">AISC @ UCSD</span>
+        <span className={`md:hidden text-lg font-bold ${textColor}`}>AISC @ UCSD</span>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center w-full">
@@ -43,7 +61,7 @@ const Navbar: React.FC = () => {
                   alt="AISC Logo"
                   width={64}
                   height={64}
-                  className="absolute transition-opacity duration-300 group-hover:opacity-0"
+                  className={`absolute transition-opacity duration-300 group-hover:opacity-0 ${(color === "default" || color === "black") && "filter-[invert(var(--invert-perc))]"} dark:filter-none`}
                 />
                 <Image
                   src="/colored_logo.png"
@@ -56,13 +74,13 @@ const Navbar: React.FC = () => {
             )}
           </Link>
 
-          <ul className="flex space-x-8">
+          <ul className={`${textColor} flex space-x-8`}>
             <li>
               <Link
                 href="/about"
                 className={`${
-                  pathname === "/about" ? "text-purple-400" : ""
-                } hover:text-purple-400 transition-colors duration-200`}
+                  pathname === "/about" ? "text-purple-500 dark:text-purple-400" : ""
+                } hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200`}
               >
                 ABOUT
               </Link>
@@ -71,8 +89,8 @@ const Navbar: React.FC = () => {
               <Link
                 href="/projects"
                 className={`${
-                  pathname === "/projects" ? "text-purple-400" : ""
-                } hover:text-purple-400 transition-colors duration-200`}
+                  pathname === "/projects" ? "text-purple-500 dark:text-purple-400" : ""
+                } hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200`}
               >
                 PROJECTS
               </Link>
@@ -81,8 +99,8 @@ const Navbar: React.FC = () => {
               <Link
                 href="/events"
                 className={`${
-                  pathname === "/events" ? "text-purple-400" : ""
-                } hover:text-purple-400 transition-colors duration-200`}
+                  pathname === "/events" ? "text-purple-500 dark:text-purple-400" : ""
+                } hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200`}
               >
                 EVENTS
               </Link>
@@ -92,7 +110,7 @@ const Navbar: React.FC = () => {
                 href="https://humansforai.com/aisc"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-purple-400 transition-colors duration-200"
+                className="hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200"
               >
                 HFAI
               </a>
@@ -101,13 +119,13 @@ const Navbar: React.FC = () => {
 
           <div className="flex-1" />
 
-          <ul>
+          <ul className={`${textColor}`}>
             <li>
               <a
                 href="https://linktr.ee/aiscucsd"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-purple-400 transition-colors duration-200"
+                className="hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200"
               >
                 GET INVOLVED
               </a>
