@@ -9,7 +9,7 @@ type member = {
 
 const AboutCard = (member: member) => {
   return (
-    <div className="bg-neutral-primary-soft flex flex-col justify-center min-w-70 max-w-sm min-h-80 p-4 border border-default rounded-2xl shadow-xs animate-fade-in-soft">
+    <div className="bg-neutral-primary-soft flex flex-col justify-center min-w-70 max-w-sm min-h-104 p-4 border border-default rounded-2xl shadow-xs animate-fade-in-soft">
         <div className="relative w-full h-70 mb-6 shadow-sm rounded-2xl">
           <Image
             src={member.photo !== "" ? `/member_photos/${member.photo}` : "/member_photos/blank-profile-picture.webp"}
