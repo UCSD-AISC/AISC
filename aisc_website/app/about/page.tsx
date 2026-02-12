@@ -18,6 +18,7 @@ const teams = [
 
 export default function AboutPage() {
   const [status, setStatus] = useState<typeof teams[number] | null>(null);
+  const filteredTeams = status ? [status] : teams;
 
   return (
     <>
@@ -164,7 +165,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-4 scale-105 animate-fade-in-hard">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-4 scale-105">
           {teams.map((team) => {
             const isActive = status === team;
 
@@ -172,13 +173,13 @@ export default function AboutPage() {
               <button
                 key={team}
                 type="button"
-                onClick={() => setStatus(team)}
+                onClick={() => setStatus((prev) => (prev === team ? null : team))}
                 className={[
                   "text-body bg-neutral-secondary-medium box-border border border-default-medium",
                   "hover:bg-neutral-tertiary-medium hover:text-heading",
                   "focus:ring-4 focus:ring-purple-600/60 focus:outline-none",
                   "shadow-xs font-medium rounded-2xl text-sm px-4 py-2.5",
-                  "hover:scale-[1.1] transition",
+                  "hover:scale-[1.1] transition cursor-pointer",
                 isActive ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : "",
                 ].join(" ")}
                   >
@@ -188,24 +189,16 @@ export default function AboutPage() {
           })}
         </div>
 
-        {/* Divider: Meet the People */}
-        <section className="w-full">
-          <p className="text-3xl italic text-gray-800 dark:text-white font-extralight text-left max-w-4xl mx-auto">
-            Meet the people spearheading this mission...
-          </p>
-        </section>
-
         {/* TEAM Section */}
         <section className="text-gray-800 dark:text-white text-center w-full">
-          <h2 className="text-4xl sm:text-5xl font-semibold mb-12">
-            Meet the Team
-          </h2>
 
           <div>
-            {teams.map((team, teamIndex) => (
+            {filteredTeams.map((team, teamIndex) => (
               <div className="mb-15" key={teamIndex}>
-                <h3 className="text-3xl sm:text-4xl mb-8">{team}</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 justify-items-center">
+                <h3 className="text-6xl sm:text-6xl mb-8">{team}</h3>
+                <div
+                key={status ?? "all"}
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-18 justify-items-center">
                   {boardMembers.map((member, idx) => {
                     if (member.teams.includes(team)) {
                       return (
