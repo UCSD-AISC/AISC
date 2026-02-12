@@ -14,10 +14,10 @@ const teams = [
   "Finance",
   "Projects",
   "Technology"
-];
+] as const;
 
 export default function AboutPage() {
-  const [status, setStatus] = useState<"Leadership" | "External" | "Education" | "Events" | "Finance" | "Projects" | "Technology" | null>(null);
+  const [status, setStatus] = useState<typeof teams[number] | null>(null);
 
   return (
     <>
