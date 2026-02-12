@@ -136,27 +136,58 @@ export default function AboutPage() {
             className="w-full max-w-md object-cover rounded-2xl"
           />
         </section>
-          <div className = "flex justify-center gap-8 scale-105 ">
-            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Leadership" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Leadership")}>Leadership</button>
-            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "External" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("External")}>External</button>
-            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Education" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Education")}>Education</button>
-            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Events" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Events")}>Events</button>
-            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Finance" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Finance")}>Finance</button>
-            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Projects" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Projects")}>Projects</button>
-            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Technology" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Technology")}>Technology</button>
+
+        <section className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-start gap-8 animate-fade-in-hard">
+          {/* LEFT TEXT */}
+          <div className="text-left">
+            <h1 className="text-6xl sm:text-7xl font-semibold text-purple-500 dark:text-purple-400 leading-tight max-w-2xl">
+              Meet the <br />
+              <span className="whitespace-nowrap">Board Members</span>
+            </h1>
+
+            <p className="mt-6 text-lg sm:text-xl text-gray-800 dark:text-gray-200 leading-relaxed">
+              Get to know the team behind AISC at UCSD! Our board members are dedicated
+              to fostering AI literacy and innovation within the community.
+            </p>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center lg:justify-end animate-fade-in-hard">
+            <Image
+              src="/icons/aisc.png"
+              alt="AISC"
+              width={180}
+              height={100}
+              className="w-90 h-auto filter-[invert(var(--invert-perc))] dark:filter-none"
+              priority
+            />
+          </div>
+        </section>
+
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-4 scale-105 animate-fade-in-hard">
+          {teams.map((team) => {
+            const isActive = status === team;
+
+            return (
+              <button
+                key={team}
+                type="button"
+                onClick={() => setStatus(team)}
+                className={[
+                  "text-body bg-neutral-secondary-medium box-border border border-default-medium",
+                  "hover:bg-neutral-tertiary-medium hover:text-heading",
+                  "focus:ring-4 focus:ring-purple-600/60 focus:outline-none",
+                  "shadow-xs font-medium rounded-2xl text-sm px-4 py-2.5",
+                  "hover:scale-[1.1] transition",
+                isActive ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : "",
+                ].join(" ")}
+                  >
+                {team}
+              </button>
+            );
+          })}
         </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-        <AboutCard
-          title="About AISC"
-          cardDescription="The AI Student Collective at UC San Diego is a student organization dedicated to providing accessible AI literacy through pre-professional programs and events. Each year is marked by high-impact events like symposiums and product competitions, as well as skill-building opportunities like resume workshops, code-alongs, and corporate mixers."
-          modalDescription="The AI Student Collective at UC San Diego is a student organization dedicated to providing accessible AI literacy through pre-professional programs and events. Each year is marked by high-impact events like symposiums and product competitions, as well as skill-building opportunities like resume workshops, code-alongs, and corporate mixers."
-          contributors={["AISC Founders", "AISC Board Members", "AISC Volunteers"]}
-          link="https://www.linkedin.com/company/aisc-ucsd/"
-          stack="Next.js, Tailwind CSS, TypeScript"
-          status="Active"
-          difficulty="Medium"
-          img="/about-aisc.png"
-        />
+
         {/* Divider: Meet the People */}
         <section className="w-full">
           <p className="text-3xl italic text-gray-800 dark:text-white font-extralight text-left max-w-4xl mx-auto">
@@ -174,23 +205,17 @@ export default function AboutPage() {
             {teams.map((team, teamIndex) => (
               <div className="mb-15" key={teamIndex}>
                 <h3 className="text-3xl sm:text-4xl mb-8">{team}</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 justify-items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 justify-items-center">
                   {boardMembers.map((member, idx) => {
                     if (member.teams.includes(team)) {
                       return (
                         <div key={idx}>
-                          <div className="w-40 h-40 bg-gray-700 rounded-full mx-auto mb-4" />
-                          <h4 className="text-xl font-bold">{member.name}</h4>
-                          <p className="text-sm dark:text-gray-300">
-                            {(team === "Education" || team === "Technology" ? member.roles.toSorted((a, b) => {
-                              if (team === "Education") {
-                                return b === "Education Fellow" ? 1 : -1;
-                              }
-                              else {
-                                return b === "Software Developer" ? 1 : -1;
-                              }
-                            }) : member.roles).join(", ")}
-                          </p>
+                          <AboutCard
+                            name={member.name}
+                            photo={member.photo}
+                            roles={member.roles}
+                            currentTeam={team}
+                          />
                         </div>
                       );
                     }
