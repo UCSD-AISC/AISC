@@ -1,70 +1,84 @@
 [
   {
+    "index": 0,
     "name": "Sadrac Santacruz",
     "roles": ["President"],
     "teams": ["Leadership"]
   },
   {
+    "index": 1,
     "name": "Rohan Sachdeva",
     "roles": ["President-Elect"],
     "teams": ["Leadership"]
   },
   {
+    "index": 2,
     "name": "Yuvika Satapathy",
     "roles": ["VP External"],
     "teams": ["Leadership", "External"]
   },
   {
+    "index": 3,
     "name": "Divya Vijay",
     "roles": ["VP Education"],
     "teams": ["Leadership", "Education"]
   },
   {
+    "index": 4,
     "name": "Kala Nguyen ",
     "roles": ["VP Events"],
     "teams": ["Leadership", "Events"]
   },
   {
+    "index": 5,
     "name": "Kylie Im",
     "roles": ["VP Internal"],
     "teams": ["Leadership"]
   },
   {
+    "index": 6,
     "name": "Jiya Makhija",
     "roles": ["VP Finance"],
     "teams": ["Leadership", "Finance"]
   },
   {
+    "index": 7,
     "name": "Tom Ragus",
     "roles": ["VP Projects", "Education Fellow"],
     "teams": ["Leadership", "Education", "Projects"]
   },
   {
+    "index": 8,
     "name": "Ryan Xavier",
     "roles": ["VP Projects", "Outreach Coordinator"],
     "teams": ["Leadership", "External", "Projects"]
   },
   {
+    "index": 9,
     "name": "Rahul Punji",
     "roles": ["VP Technology"],
     "teams": ["Leadership", "Technology"]
   },
   {
+    "index": 10,
     "name": "Borngreat Omoma-Edosa",
     "roles": ["VP Outreach"],
     "teams": ["Leadership", "External"]
   },
   {
+    "index": 11,
     "name": "Brandon Hunyh",
     "roles": ["VP Media"],
     "teams": ["Leadership", "External"]
   },
   {
+    "index": 12,
     "name": "Ananya Mahadi",
     "roles": ["VP Design", "Education Fellow"],
     "teams": ["Leadership", "External", "Education"]
   },
   {
+    "index": 13,
     "name": "Valmik Nahata",
     "roles": ["VP Research", "Project Lead"],
     "teams": ["Leadership", "Projects"]
@@ -72,21 +86,25 @@
 
 
   {
+    "index": 14,
     "name": "Varun Kumar ",
   "roles": ["Outreach Coordinator", "Education Fellow"],
     "teams": ["External", "Education"]
   },
   {
+    "index": 15,
     "name": "Ritvik Mohindru",
     "roles": ["Outreach Coordinator", "Software Developer"],
     "teams": ["External", "Technology"]
   },
   {
+    "index": 16,
     "name": "Syd Verma ",
     "roles": ["Designer", "Software Developer"],
     "teams": ["External", "Technology"]
   },
   {
+    "index": 17,
     "name": "Emma Perez",
     "roles": ["Designer"],
     "teams": ["External"]
@@ -94,11 +112,13 @@
 
 
   {
+    "index": 18,
     "name": "Chloe Guan ",
     "roles": ["Event Coordinator"],
     "teams": ["Events"]
   },
   {
+    "index": 19,
     "name": "Rishik Chokhany",
     "roles": ["Event Coordinator"],
     "teams": ["Events"]
@@ -106,16 +126,19 @@
 
 
   {
+    "index": 20,
     "name": "Ethan Huang",
     "roles": ["Financial Analyst"],
     "teams": ["Finance"]
   },
   {
+    "index": 21,
     "name": "Kaung Khant",
     "roles": ["Financial Analyst"],
     "teams": ["Finance"]
   },
   {
+    "index": 22,
     "name": "Koshik Kumaravel",
     "roles": ["Financial Analyst"],
     "teams": ["Finance"]
@@ -123,57 +146,68 @@
 
 
   {
+    "index": 23,
     "name": "Adi Arora",
     "roles": ["Project Lead"],
     "teams": ["Projects"]
   },
   {
+    "index": 24,
     "name": "Emmanuel Viray",
     "roles": ["Project Lead"],
     "teams": ["Projects"]
   },
   {
+    "index": 25,
     "name": "Lucas Yan",
     "roles": ["Project Lead"],
     "teams": ["Projects"]
   },
   {
+    "index": 26,
     "name": "Shant Guedekelian",
     "roles": ["Project Lead"],
     "teams": ["Projects"]
   },
   {
+    "index": 27,
     "name": "Ashley Zhou ",
     "roles": ["Research Project Team Member",
     "Education Fellow"],
     "teams": ["Education", "Projects"]
   },
   {
+    "index": 28,
     "name": "Sharana Sabesan",
     "roles": ["Research Project Team Member", "Education Fellow"],
     "teams": ["Education", "Projects"]
   },
   {
+    "index": 29,
     "name": "Aditya Singh",
     "roles": ["Project Team Member"],
     "teams": ["Projects"]
   },
   {
+    "index": 30,
     "name": "Toby Zhang",
     "roles": ["Project Team Member"],
     "teams": ["Projects"]
   },
   {
+    "index": 31,
     "name": "Anthony Abumanneh",
     "roles": ["Project Team Member", "Education Fellow"],
     "teams": ["Education", "Projects"]
   },
   {
+    "index": 32,
     "name": "Shreya Hiremath",
     "roles": ["Project Team Member"],
     "teams": ["Projects"]
   },
   {
+    "index": 33,
     "name": "Andrew Park",
     "roles": ["Project Team Member"],
     "teams": ["Projects"]
@@ -181,21 +215,25 @@
 
 
   {
+    "index": 34,
     "name": "Jaehee Kim",
     "roles": ["Software Developer", "Education Fellow"],
     "teams": ["Education", "Technology"]
   },
   {
+    "index": 35,
     "name": "Karim Barajas",
     "roles": ["Software Developer", "Education Fellow"],
     "teams": ["Education", "Technology"]
   },
   {
+    "index": 36,
     "name": "Shashwat Dudeja",
     "roles": ["Software Developer"],
     "teams": ["Technology"]
   },
   {
+    "index": 37,
     "name": "Toby Chin",
     "roles": ["Software Developer", "Education Fellow"],
     "teams": ["Education", "Technology"]
