@@ -1,7 +1,10 @@
+"use client"
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import Image from "next/image";
 import boardMembers from "@/lib/board-members.json";
+import AboutCard from "@/components/AboutCard/AboutCard";
+import { useState } from "react";
 
 const teams = [
   "Leadership",
@@ -14,6 +17,8 @@ const teams = [
 ];
 
 export default function AboutPage() {
+  const [status, setStatus] = useState<"Leadership" | "External" | "Education" | "Events" | "Finance" | "Projects" | "Technology" | null>(null);
+
   return (
     <>
       <Navbar />
@@ -131,7 +136,27 @@ export default function AboutPage() {
             className="w-full max-w-md object-cover rounded-2xl"
           />
         </section>
-
+          <div className = "flex justify-center gap-8 scale-105 ">
+            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Leadership" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Leadership")}>Leadership</button>
+            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "External" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("External")}>External</button>
+            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Education" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Education")}>Education</button>
+            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Events" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Events")}>Events</button>
+            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Finance" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Finance")}>Finance</button>
+            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Projects" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Projects")}>Projects</button>
+            <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Technology" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Technology")}>Technology</button>
+        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <AboutCard
+          title="About AISC"
+          cardDescription="The AI Student Collective at UC San Diego is a student organization dedicated to providing accessible AI literacy through pre-professional programs and events. Each year is marked by high-impact events like symposiums and product competitions, as well as skill-building opportunities like resume workshops, code-alongs, and corporate mixers."
+          modalDescription="The AI Student Collective at UC San Diego is a student organization dedicated to providing accessible AI literacy through pre-professional programs and events. Each year is marked by high-impact events like symposiums and product competitions, as well as skill-building opportunities like resume workshops, code-alongs, and corporate mixers."
+          contributors={["AISC Founders", "AISC Board Members", "AISC Volunteers"]}
+          link="https://www.linkedin.com/company/aisc-ucsd/"
+          stack="Next.js, Tailwind CSS, TypeScript"
+          status="Active"
+          difficulty="Medium"
+          img="/about-aisc.png"
+        />
         {/* Divider: Meet the People */}
         <section className="w-full">
           <p className="text-3xl italic text-gray-800 dark:text-white font-extralight text-left max-w-4xl mx-auto">

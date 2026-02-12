@@ -16,7 +16,7 @@ type project = {
 
 
 
-const Card = (project: project) => {
+const ProjectCard = (project: project) => {
   const renderDifficulty = (difficulty: string ) => {
       if (difficulty === "Easy") {
         return <p className="text-body mb-6 flex justify-center items-center rounded-full bg-green-600 px-2 w-fit text-white-900">{difficulty}</p>;
@@ -71,4 +71,4 @@ const Card = (project: project) => {
   );
 }
 
-export default Card;
+export default ProjectCard;

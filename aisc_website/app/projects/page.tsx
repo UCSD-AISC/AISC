@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import projects from "@/lib/projects.json";
-import Card from "@/components/Card/Card";
+import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import education from "@/public/education.png";
 import { useState } from "react";
 
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
 
         {projects.filter(card => card.status === status || status === null
         ).map((card) => ( 
-        <Card
+        <ProjectCard
           key={card.index}
           title={card.title}
           cardDescription={card.cardDescription}
