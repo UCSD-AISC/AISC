@@ -197,7 +197,7 @@ export default function AboutPage() {
                 <h3 className="text-6xl sm:text-6xl mb-8">{team}</h3>
                 <div
                 key={status ?? "all"}
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-60 gap-y-20 justify-items-center">
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 min-[120rem]:grid-cols-4 min-[145rem]:grid-cols-5 gap-x-60 gap-y-20 justify-items-center">
                   {boardMembers.map((member, idx) => {
                     if (member.teams.includes(team)) {
                       return (
