@@ -3,12 +3,12 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="w-full px-6 md:px-20 py-10 text-white flex flex-col md:flex-row justify-between items-center">
+    <footer className="w-full px-6 md:px-20 py-10 dark:text-white flex flex-col md:flex-row justify-between items-center">
       {/* Left side text */}
       <p className="text-sm mb-4 md:mb-0">AISC © 2025</p>
 
       {/* Social icons */}
-      <div className="flex gap-4">
+      <div className="flex gap-4 filter-[invert(var(--invert-perc))] dark:filter-none">
         <Link
           href="https://www.instagram.com/aiscsandiego/?hl=en"
           target="_blank"

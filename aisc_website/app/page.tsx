@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <section className="w-full text-white py-24 text-center md:text-left">
+      <section className="w-full text-gray-800 dark:text-white py-24 text-center md:text-left">
         <div className="flex flex-col items-center justify-center px-4">
           <Image
             src="/3DCubeLogo.png"
@@ -21,7 +21,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-5xl font-bold tracking-widest mb-2 font-[var(--font-bai-jamjuree)]">
             ARTIFICIAL INTELLIGENCE STUDENT COLLECTIVE
           </h1>
-          <p className="text-sm md:text-base text-gray-300 mb-4 font-[var(--font-bai-jamjuree)]">
+          <p className="text-sm md:text-base dark:text-gray-300 mb-4 font-[var(--font-bai-jamjuree)]">
             Powered by Humans For AI
           </p>
           <p className="text-base md:text-lg font-[var(--font-bai-jamjuree)]">
@@ -31,7 +31,7 @@ export default function Home() {
       </section>
 
       <Countdown />
-      <section className="flex flex-col md:flex-row justify-between items-center text-white px-6 md:px-20 py-20 gap-y-12 md:gap-y-0">
+      <section className="flex flex-col md:flex-row justify-between items-center text-gray-800 dark:text-white px-6 md:px-20 py-20 gap-y-12 md:gap-y-0">
         {/* Left Side Text */}
         <div className="md:w-1/2 text-lg leading-relaxed font-[var(--font-bai-jamjuree)]">
           <p>
@@ -43,14 +43,14 @@ export default function Home() {
         {/* Right Side Stats */}
         <div className="md:w-1/2 text-right">
           <p className="text-9xl font-bold font-[var(--font-archivo)]">91%</p>
-          <p className="text-xl text-blue-200 mb-6 font-[var(--font-bai-jamjuree)]">
+          <p className="text-xl text-blue-400 dark:text-blue-200 mb-6 font-[var(--font-bai-jamjuree)]">
             OF TECH EXECUTIVES
           </p>
           <p className="text-9xl font-bold font-[var(--font-archivo)]">84%</p>
-          <p className="text-xl text-blue-200 mb-4 font-[var(--font-bai-jamjuree)]">
+          <p className="text-xl text-blue-400 dark:text-blue-200 mb-4 font-[var(--font-bai-jamjuree)]">
             OF THE PUBLIC
           </p>
-          <p className="text-2xl font-bold text-blue-300 leading-tight font-[var(--font-bai-jamjuree)]">
+          <p className="text-2xl font-bold text-blue-400 dark:text-blue-300 leading-tight font-[var(--font-bai-jamjuree)]">
             BELIEVE THAT AI WILL <br />
             CONSTITUTE THE NEXT <br />
             <span className="italic font-extrabold">
@@ -61,7 +61,7 @@ export default function Home() {
       </section>
 
       {/* Bottom Justification Text */}
-      <section className="text-white px-6 md:px-20 pb-16 text-left text-xl font-normal leading-relaxed max-w-5xl mx-auto font-[var(--font-bai-jamjuree)]">
+      <section className="text-gray-800 dark:text-white px-6 md:px-20 pb-16 text-left text-xl font-normal leading-relaxed max-w-5xl mx-auto font-[var(--font-bai-jamjuree)]">
         <p>
           Given that, it’s important for everyone to be AI literate, and
           understand the capabilities of this technology instead of succumbing
@@ -69,17 +69,15 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="text-white px-6 md:px-20 py-24 text-center md:text-right">
+      <section className="text-gray-800 dark:text-white px-6 md:px-20 py-24 text-center md:text-right">
         <div className="flex flex-col items-center text-center gap-4 mb-10 md:flex-row md:justify-center md:items-end md:text-right">
           <h2
-            className="text-[150px] md:text-[200px] font-black leading-none font-[var(--font-archivo)]"
-            style={{ color: "#20CCF124" }}
+            className="text-[150px] md:text-[200px] font-black leading-none font-[var(--font-archivo)] text-[#29b9e0d5] dark:text-[#20CCF124]"
           >
             YET
           </h2>
           <h2
-            className="text-[60px] md:text-[100px] font-black leading-none mb-6 font-[var(--font-archivo)]"
-            style={{ color: "#20CCF124" }}
+            className="text-[60px] md:text-[100px] font-black leading-none mb-6 font-[var(--font-archivo)] text-[#29b9e0d5] dark:text-[#20CCF124]"
           >
             ONLY
           </h2>
@@ -89,44 +87,44 @@ export default function Home() {
           <p className="text-lg font-[var(--font-bai-jamjuree)]">
             <span className="inline-flex items-end gap-2">
               <span className="text-5xl">♀️♂️♂️</span>
-              <span className="text-5xl font-bold text-white">1 IN 3</span>
+              <span className="text-5xl font-bold">1 IN 3</span>
             </span>{" "}
-            <span className="text-purple-300 text-xl font-normal font-[var(--font-bai-jamjuree)]">
+            <span className="text-purple-500 dark:text-purple-300 text-xl font-normal font-[var(--font-bai-jamjuree)]">
               of those in data and AI roles are women
             </span>
           </p>
 
-          <p className="text-8xl font-bold text-white font-[var(--font-archivo)]">
+          <p className="text-8xl font-bold font-[var(--font-archivo)]">
             5%{" "}
-            <span className="text-purple-300 text-xl font-normal font-[var(--font-bai-jamjuree)]">
+            <span className="text-purple-500 dark:text-purple-300 text-xl font-normal font-[var(--font-bai-jamjuree)]">
               of PhD candidates for AI are black or hispanic
             </span>
           </p>
 
-          <p className="text-8xl font-bold text-white font-[var(--font-archivo)]">
+          <p className="text-8xl font-bold font-[var(--font-archivo)]">
             16%{" "}
-            <span className="text-purple-300 text-xl font-normal font-[var(--font-bai-jamjuree)]">
+            <span className="text-purple-500 dark:text-purple-300 text-xl font-normal font-[var(--font-bai-jamjuree)]">
               of Americans are literate in AI
             </span>
           </p>
         </div>
 
-        <p className="text-center mt-12 text-xl font-normal text-gray-300 font-[var(--font-bai-jamjuree)]">
+        <p className="text-center mt-12 text-xl font-normal dark:text-gray-300 font-[var(--font-bai-jamjuree)]">
           Not everyone has the means to become AI literate, whether it’s due to
           a lack of resources, opportunities, or time.
         </p>
       </section>
 
-      <section className="text-white px-6 md:px-20 py-24">
+      <section className="text-gray-800 dark:text-white px-6 md:px-20 py-24">
         <p className="text-3xl md:text-5xl font-light leading-relaxed mb-12 max-w-5xl mx-auto font-[var(--font-bai-jamjuree)]">
           AISC @ UCSD wants to change that by providing{" "}
-          <span className="italic text-pink-400 font-semibold">
+          <span className="italic text-pink-500 dark:text-pink-400 font-semibold">
             accessible AI literacy
           </span>{" "}
           for students, equipping them to enter the changing workforce and
           world.
         </p>
-        <p className="italic text-gray-300 text-xl font-[var(--font-bai-jamjuree)]">
+        <p className="italic dark:text-gray-300 text-xl font-[var(--font-bai-jamjuree)]">
           See how we’ve been working towards that…
         </p>
       </section>
@@ -151,7 +149,7 @@ export default function Home() {
             communities.
           </p>
 
-          <Button text="READ MORE" size="lg" href="/projects" />
+          <Button text="READ MORE" size="lg" href="/projects" color="white" />
         </div>
       </section>
 
@@ -161,7 +159,7 @@ export default function Home() {
           <Button text="VIEW ALL EVENTS" href="/events" size="md" />
         </div>
       </section>
-      <section className="text-white px-10 py-14 font-[var(--font-bai-jamjuree)]">
+      <section className="text-gray-800 dark:text-white px-10 py-14 font-[var(--font-bai-jamjuree)]">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 inline-block origin-left">
             Non-Discrimination Policy
@@ -171,7 +169,7 @@ export default function Home() {
               In accordance with applicable Federal and State law and University policy, AISC does not discriminate, or grant preferences, on the basis of race, color, national origin, religion, sex, gender identity, citizenship, disability, and/or other protected categories. All enrolled students are encouraged to participate in AISC events and activities.
             </p>
             <img
-              className="w-32 h-auto flex-shrink-0"
+              className="w-32 h-auto flex-shrink-0 filter-[invert(var(--invert-perc))] dark:filter-none"
               src="icons/aisc.png"
               alt="AISC"
             />
