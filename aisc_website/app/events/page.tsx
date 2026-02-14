@@ -21,21 +21,25 @@ export default function EventsPage() {
   return (
     <>
       <Navbar />
-      <section className="relative min-h-screen flex flex-col-reverse md:flex-row justify-between px-4 py-16 md:py-20 text-white">
-        <div className="flex flex-col gap-6 md:flex-row w-full justify-between items-start md:items-end">
-          <h1 className="text-white font-semibold text-3xl md:text-5xl font-[var(--font-bai-jamjuree)] leading-snug max-w-4xl text-center md:text-left">
-            Technology could benefit or hurt people, so the usage of tech is the
-            responsibility of humanity as a whole, not just the discoverer. I am
-            a person before I’m an AI technologist.
-          </h1>
-          <p className="text-center md:text-right text-base md:text-lg text-white/70 italic font-[var(--font-bai-jamjuree)]">
-            — Fei-Fei Li
-          </p>
-        </div>
-        <p className="mt-6 md:mt-10 text-base md:text-lg italic text-white/80 max-w-2xl text-center md:text-right self-center md:self-end font-[var(--font-bai-jamjuree)]">
-          Take a look at our local efforts…
-        </p>
-      </section>
+<section className="relative min-h-screen overflow-hidden flex items-center px-6 md:px-14">
+  <div className="relative w-full">
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      <h1 className="text-cyan-700 font-semibold text-3xl md:text-5xl leading-snug max-w-4xl text-left font-[var(--font-bai-jamjuree)]">
+        Technology could benefit or hurt people, so the usage of tech is the
+        responsibility of humanity as a whole, not just the discoverer. I am a
+        person before I’m an AI technologist.
+      </h1>
+
+      <p className="md:mt-0 text-sm md:text-base text-white/50 italic whitespace-nowrap font-[var(--font-bai-jamjuree)] translate-y-40">
+        — Fei-Fei Li
+      </p>
+    </div>
+
+    <p className="mt-20 md:mt-32 text-sm md:text-base italic text-white/55 text-right font-[var(--font-bai-jamjuree)]">
+      Take a look at our local efforts…
+    </p>
+  </div>
+</section>
       <section className="space-y-24 mt-12">
         {["Happening", "Upcoming", "Past"].map((category) => {
           const filteredEvents = events.filter(

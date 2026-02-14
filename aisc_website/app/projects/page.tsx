@@ -40,7 +40,7 @@ export default function ProjectsPage() {
         <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Recruiting" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Recruiting")}>Recruiting</button>
         <button type="button" className={`text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-purple-600/60 shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Completed" ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : ""}`} onClick={() => setStatus("Completed")}>Archived</button>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch">
 
         {projects.filter(card => card.status === status || status === null
         ).map((card) => ( 
