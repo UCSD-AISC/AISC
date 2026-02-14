@@ -1,0 +1,279 @@
+[
+  {
+    "index": 0,
+    "name": "Sadrac Santacruz",
+    "photo": "Sadrac_Santacruz.jpg",
+    "roles": ["President"],
+    "teams": ["Leadership"]
+  },
+  {
+    "index": 1,
+    "name": "Rohan Sachdeva",
+    "photo": "RohanSachdeva.jpg",
+    "roles": ["President-Elect"],
+    "teams": ["Leadership"]
+  },
+  {
+    "index": 2,
+    "name": "Yuvika Satapathy",
+    "photo": "",
+    "roles": ["VP External"],
+    "teams": ["Leadership", "External"]
+  },
+  {
+    "index": 3,
+    "name": "Divya Vijay",
+    "photo": "Divya_Vijay.jpg",
+    "roles": ["VP Education"],
+    "teams": ["Leadership", "Education"]
+  },
+  {
+    "index": 4,
+    "name": "Kala Nguyen ",
+    "photo": "",
+    "roles": ["VP Events"],
+    "teams": ["Leadership", "Events"]
+  },
+  {
+    "index": 5,
+    "name": "Kylie Im",
+    "photo": "",
+    "roles": ["VP Internal"],
+    "teams": ["Leadership"]
+  },
+  {
+    "index": 6,
+    "name": "Jiya Makhija",
+    "photo": "",
+    "roles": ["VP Finance"],
+    "teams": ["Leadership", "Finance"]
+  },
+  {
+    "index": 7,
+    "name": "Tom Ragus",
+    "photo": "TomRagus.jpeg",
+    "roles": ["VP Projects", "Education Fellow"],
+    "teams": ["Leadership", "Education", "Projects"]
+  },
+  {
+    "index": 8,
+    "name": "Ryan Xavier",
+    "photo": "",
+    "roles": ["VP Projects", "Outreach Coordinator"],
+    "teams": ["Leadership", "External", "Projects"]
+  },
+  {
+    "index": 9,
+    "name": "Rahul Punji",
+    "photo": "",
+    "roles": ["VP Technology"],
+    "teams": ["Leadership", "Technology"]
+  },
+  {
+    "index": 10,
+    "name": "Borngreat Omoma-Edosa",
+    "photo": "BorngreatOmoma.jpg",
+    "roles": ["VP Outreach"],
+    "teams": ["Leadership", "External"]
+  },
+  {
+    "index": 11,
+    "name": "Brandon Hunyh",
+    "photo": "",
+    "roles": ["VP Media"],
+    "teams": ["Leadership", "External"]
+  },
+  {
+    "index": 12,
+    "name": "Ananya Mahadi",
+    "photo": "",
+    "roles": ["VP Design", "Education Fellow"],
+    "teams": ["Leadership", "External", "Education"]
+  },
+  {
+    "index": 13,
+    "name": "Valmik Nahata",
+    "photo": "",
+    "roles": ["VP Research", "Project Lead"],
+    "teams": ["Leadership", "Projects"]
+  },
+
+
+  {
+    "index": 14,
+    "name": "Varun Kumar ",
+    "photo": "",
+    "roles": ["Outreach Coordinator", "Education Fellow"],
+    "teams": ["External", "Education"]
+  },
+  {
+    "index": 15,
+    "name": "Ritvik Mohindru",
+    "photo": "",
+    "roles": ["Outreach Coordinator", "Software Developer"],
+    "teams": ["External", "Technology"]
+  },
+  {
+    "index": 16,
+    "name": "Syd Verma ",
+    "photo": "SydVerma.jpeg",
+    "roles": ["Designer", "Software Developer"],
+    "teams": ["External", "Technology"]
+  },
+  {
+    "index": 17,
+    "name": "Emma Perez",
+    "photo": "",
+    "roles": ["Designer"],
+    "teams": ["External"]
+  },
+
+
+  {
+    "index": 18,
+    "name": "Chloe Guan ",
+    "photo": "",
+    "roles": ["Event Coordinator"],
+    "teams": ["Events"]
+  },
+  {
+    "index": 19,
+    "name": "Rishik Chokhany",
+    "photo": "",
+    "roles": ["Event Coordinator"],
+    "teams": ["Events"]
+  },
+
+
+  {
+    "index": 20,
+    "name": "Ethan Huang",
+    "photo": "",
+    "roles": ["Financial Analyst"],
+    "teams": ["Finance"]
+  },
+  {
+    "index": 21,
+    "name": "Kaung Khant",
+    "photo": "",
+    "roles": ["Financial Analyst"],
+    "teams": ["Finance"]
+  },
+  {
+    "index": 22,
+    "name": "Koshik Kumaravel",
+    "photo": "",
+    "roles": ["Financial Analyst"],
+    "teams": ["Finance"]
+  },
+
+
+  {
+    "index": 23,
+    "name": "Adi Arora",
+    "photo": "",
+    "roles": ["Project Lead"],
+    "teams": ["Projects"]
+  },
+  {
+    "index": 24,
+    "name": "Emmanuel Viray",
+    "photo": "EmmanuelViray.JPG",
+    "roles": ["Project Lead"],
+    "teams": ["Projects"]
+  },
+  {
+    "index": 25,
+    "name": "Lucas Yan",
+    "photo": "",
+    "roles": ["Project Lead"],
+    "teams": ["Projects"]
+  },
+  {
+    "index": 26,
+    "name": "Shant Guedekelian",
+    "photo": "",
+    "roles": ["Project Lead"],
+    "teams": ["Projects"]
+  },
+  {
+    "index": 27,
+    "name": "Ashley Zhou ",
+    "photo": "",
+    "roles": ["Research Project Team Member",
+    "Education Fellow"],
+    "teams": ["Education", "Projects"]
+  },
+  {
+    "index": 28,
+    "name": "Sharana Sabesan",
+    "photo": "",
+    "roles": ["Research Project Team Member", "Education Fellow"],
+    "teams": ["Education", "Projects"]
+  },
+  {
+    "index": 29,
+    "name": "Aditya Singh",
+    "photo": "",
+    "roles": ["Project Team Member"],
+    "teams": ["Projects"]
+  },
+  {
+    "index": 30,
+    "name": "Toby Zhang",
+    "photo": "",
+    "roles": ["Project Team Member"],
+    "teams": ["Projects"]
+  },
+  {
+    "index": 31,
+    "name": "Anthony Abumanneh",
+    "photo": "",
+    "roles": ["Project Team Member", "Education Fellow"],
+    "teams": ["Education", "Projects"]
+  },
+  {
+    "index": 32,
+    "name": "Shreya Hiremath",
+    "photo": "",
+    "roles": ["Project Team Member"],
+    "teams": ["Projects"]
+  },
+  {
+    "index": 33,
+    "name": "Andrew Park",
+    "photo": "AndrewPark.jpg",
+    "roles": ["Project Team Member"],
+    "teams": ["Projects"]
+  },
+
+
+  {
+    "index": 34,
+    "name": "Jaehee Kim",
+    "photo": "",
+    "roles": ["Software Developer", "Education Fellow"],
+    "teams": ["Education", "Technology"]
+  },
+  {
+    "index": 35,
+    "name": "Karim Barajas",
+    "photo": "",
+    "roles": ["Software Developer", "Education Fellow"],
+    "teams": ["Education", "Technology"]
+  },
+  {
+    "index": 36,
+    "name": "Shashwat Dudeja",
+    "photo": "",
+    "roles": ["Software Developer"],
+    "teams": ["Technology"]
+  },
+  {
+    "index": 37,
+    "name": "Toby Chin",
+    "photo": "TobyChin.jpg",
+    "roles": ["Software Developer", "Education Fellow"],
+    "teams": ["Education", "Technology"]
+  }
+]
