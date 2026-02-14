@@ -3,7 +3,7 @@
     "index": 0,
     "title": "Mushroom Edibility Detector",
     "cardDescription": "This project uses computer vision to classify mushrooms as edible or poisonous based on their features",
-    "modalDescription": "Ever wondered which mushrooms are safe to eat? This project uses machine learning to classify mushrooms as edible or poisonous based on their features. We gather publicly available mushroom data on iNaturalist and other sites, explore it to understand common patterns and limitations, and train a model to learn visual cues that separate the two categories. Then, we evaluate how well the model performs, look closely at where it gets confused, and discuss the safety and ethical concerns of using predictions in a real-world context. Using machine learning can help people make informed decisions about which mushrooms are safe to consume.",
+    "modalDescription": "Ever wondered which mushrooms are safe to eat? This project uses computer vision to classify mushrooms as edible or poisonous based on their features. By analyzing images of mushrooms, we can help foragers and nature enthusiasts make informed decisions about which mushrooms are safe to consume. The model is trained on a dataset of mushroom images, and it learns to identify key characteristics that distinguish edible mushrooms from their poisonous counterparts.",
     "contributors": [
       "Shant",
       "Andrew"
@@ -11,14 +11,14 @@
     "stack": "Python",
     "status": "Active",
     "difficulty": "Easy",
-    "link": "https://github.com/shantguedekelian/Mushroom_Edibility_Predictor",
-    "img": "/mushroom.jpg"
+    "link": "https://github.com/UCSD-AISC/AISC",
+    "img": "/mushroom1.png"
   },
   {
     "index": 1,
     "title": "NBA Court Geometry Modeling",
     "cardDescription": "This project uses machine learning to look at NBA analytics and player performances",
-    "modalDescription": "The game of basketball is evolving. This project investigates how changes to NBA court geometry can be used to counter modern three-point inflation and restore stylistic balance in professional basketball. Using historical NBA shot-tracking and player performance data, the project builds artificial intelligence simulations and machine-learning probability models to estimate shot difficulty and shot selection. By simulating counterfactual court designs—such as extending the three-point arc or widening the baselines—the system evaluates how teams would adapt their offensive strategies under new spatial constraints.",
+    "modalDescription": "Ever wondered how NBA players perform on different parts of the court? This project utilizes machine learning to analyze NBA analytics and player performances based on court geometry. By examining player movements and shot data, we can gain insights into how players perform in various areas of the court.",
     "contributors": [
       "Emmanuel",
       "Anthony"
@@ -26,7 +26,7 @@
     "stack": "Python",
     "status": "Active",
     "difficulty": "Easy",
-    "link": "https://github.com/emjviray/BasketballEngineering",
+    "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/nba.jpg"
   },
   {
@@ -42,7 +42,7 @@
     "status": "Active",
     "difficulty": "Easy",
     "link": "https://github.com/UCSD-AISC/AISC",
-    "img": "/machinelearning.avif"
+    "img": "/machinelearning.png"
   },
   {
     "index": 3,
