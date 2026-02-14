@@ -139,7 +139,7 @@ export default function AboutPage() {
         </section>
 
         <section className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-start gap-8 animate-fade-in-hard">
-          {/* LEFT TEXT */}
+
           <div className="text-left">
             <h1 className="text-6xl sm:text-7xl font-semibold text-purple-500 dark:text-purple-400 leading-tight max-w-2xl">
               Meet the <br />
@@ -152,7 +152,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* RIGHT IMAGE */}
           <div className="flex justify-center lg:justify-end animate-fade-in-hard">
             <Image
               src="/icons/aisc.png"
@@ -198,7 +197,7 @@ export default function AboutPage() {
                 <h3 className="text-6xl sm:text-6xl mb-8">{team}</h3>
                 <div
                 key={status ?? "all"}
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-18 justify-items-center">
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-60 gap-y-20 justify-items-center">
                   {boardMembers.map((member, idx) => {
                     if (member.teams.includes(team)) {
                       return (
