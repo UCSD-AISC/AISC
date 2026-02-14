@@ -10,7 +10,6 @@
     ],
     "stack": "Python",
     "status": "Active",
-    "difficulty": "Easy",
     "link": "https://github.com/shantguedekelian/Mushroom_Edibility_Predictor",
     "img": "/mushroom.jpg"
   },
@@ -25,7 +24,6 @@
     ],
     "stack": "Python",
     "status": "Active",
-    "difficulty": "Easy",
     "link": "https://github.com/emjviray/BasketballEngineering",
     "img": "/nba.jpg"
   },
@@ -40,7 +38,6 @@
     ],
     "stack": "Python",
     "status": "Active",
-    "difficulty": "Easy",
     "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/machinelearning.avif"
   },
@@ -58,7 +55,6 @@
     ],
     "stack": "Python",
     "status": "Completed",
-    "difficulty": "Medium",
     "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/colored_logo.png"
   },
@@ -75,7 +71,6 @@
     ],
     "stack": "Python",
     "status": "Completed",
-    "difficulty": "Hard",
     "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/colored_logo.png"
   },
@@ -87,7 +82,6 @@
     "contributors": ["Sadrac Santacruz Ibarra", "Rohan Sachdeva"],
     "stack": "Python",
     "status": "Completed",
-    "difficulty": "Medium",
     "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/colored_logo.png"
   },
@@ -99,7 +93,6 @@
     "contributors": ["Sadrac Santacruz Ibarra", "Rohan Sachdeva"],
     "stack": "Python",
     "status": "Recruiting",
-    "difficulty": "Medium",
     "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/colored_logo.png"
   }
