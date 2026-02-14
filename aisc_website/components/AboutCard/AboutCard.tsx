@@ -18,7 +18,7 @@ const AboutCard = (member: member) => {
             className="object-cover rounded-2xl"
           />
         </div>
-      <h5 className="mb-3 text-xl font-bold tracking-tight text-heading leading-6 flex justify-center items-center text-cyan-300 font-semibold dark:text-indigo-300">{member.name}</h5>
+      <h5 className="mb-3 text-xl font-semibold tracking-tight text-heading leading-6 flex justify-center items-center text-indigo-400 dark:text-indigo-300">{member.name}</h5>
       <p className="text-sm dark:text-gray-300 text-size-lg">
         {(member.currentTeam === "Education" || member.currentTeam === "Technology" ? member.roles.toSorted((a, b) => {
           if (member.currentTeam === "Education") {
