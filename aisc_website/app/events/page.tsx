@@ -90,9 +90,9 @@ export default function EventsPage() {
                             {event.location}
                           </p>
                         </div>
-                        <div className="flex-1 w-full max-w-md group overflow-hidden">
+                        <div className={`flex-1 w-full max-w-md group overflow-hidden ${event.image === null ? "hidden" : ""}`}>
                           <Image
-                            src={event.image}
+                            src={`/event_images/${event.image}`}
                             alt={event.title}
                             width={600}
                             height={400}
