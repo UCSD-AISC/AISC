@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import projects from "@/lib/projects.json";
-import Card from "@/components/Card/Card";
+import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import education from "@/public/education.png";
 import { useState } from "react";
 
@@ -11,7 +11,7 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <Navbar />
+      <Navbar color="white" />
       
       <section 
         className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mt-[200px]  h-[550px] bg-gradient-to-r from-[#0f172a] via-[#3b0f2d] to-[#0f2a2f]"
@@ -26,7 +26,7 @@ export default function ProjectsPage() {
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#0f172a]" />
 
 
-        <h1 className="absolute top-[180px] left-1/2 -translate-x-1/2 text-center px-6 text-4xl sm:text-5xl md:text-7xl font-semibold text-purple-400 animate-fade-in-hard">
+        <h1 className="absolute top-[180px] left-1/2 -translate-x-1/2 text-center px-6 text-4xl sm:text-5xl md:text-7xl font-semibold text-purple-500 dark:text-purple-400 animate-fade-in-hard">
           Projects
         </h1>
        <h1 className="absolute top-[350px] left-1/2 -translate-x-1/2 text-center px-6 text-4xl sm:text-5xl md:text-4xl  text-gray-100 drop-shadow animate-fade-in-hard">
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
 
         {projects.filter(card => card.status === status || status === null
         ).map((card) => ( 
-        <Card
+        <ProjectCard
           key={card.index}
           title={card.title}
           cardDescription={card.cardDescription}

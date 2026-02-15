@@ -16,7 +16,7 @@ type project = {
 
 
 
-const Card = (project: project) => {
+const ProjectCard = (project: project) => {
   const renderDifficulty = (difficulty: string ) => {
       if (difficulty === "Easy") {
         return <p className="text-body mb-6 flex justify-center items-center rounded-full bg-green-600 px-2 w-fit text-white-900">{difficulty}</p>;
@@ -48,7 +48,7 @@ const Card = (project: project) => {
             className="object-contain"
           />
         </div>
-        <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 flex justify-center items-center text-indigo-300
+        <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 flex justify-center items-center text-indigo-400 dark:text-indigo-300
 ">{project.title}</h5>
         <div className="flex flex-row justify-center items-center">
           {renderDifficulty(project.difficulty)}
@@ -71,4 +71,4 @@ const Card = (project: project) => {
   );
 }
 
-export default Card;
+export default ProjectCard;
