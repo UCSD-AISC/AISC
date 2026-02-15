@@ -5,7 +5,7 @@
     "title": "Technical Workshop: Data Visualizations (Matplotlib & Seaborn)",
     "date": "Wednesday, February 18 | 5:00 - 6:00PM PST",
     "location": "",
-    "countdowntime": "02/18/2026 5:00"
+    "countdowntime": "02/18/2026 17:00"
   },
 
   {
@@ -14,7 +14,7 @@
     "title": "Technical Workshop: Getting Started with Kaggle Competitions",
     "date": "Thursday, February 19 | 5:00 - 6:00PM PST",
     "location": "",
-    "countdowntime": "02/19/2026 5:00"
+    "countdowntime": "02/19/2026 17:00"
   },
 
   {
@@ -23,7 +23,7 @@
     "title": "Envision 2026 Showcase",
     "date": "Saturday, February 21 | 1:00 - 2:00PM PST",
     "location": "SME Building Patio",
-    "countdowntime": "02/21/2026 1:00"
+    "countdowntime": "02/21/2026 13:00"
   },
 
   {
@@ -32,7 +32,7 @@
     "title": "Guest Speaker Sonata Simonaitis-Boyd",
     "date": "Thursday, February 26 | 5:00 - 6:00PM PST",
     "location": "RIMAC Conference Room and Zoom",
-    "countdowntime": "02/26/2026 5:00"
+    "countdowntime": "02/26/2026 17:00"
   },
 
   {
@@ -41,71 +41,42 @@
     "title": "Engineers on the Green",
     "date": "Thursday, January 8 | 11:00 - 2:30PM PST",
     "location": "Warren Mall",
-    "countdowntime": "01/15/2026 10:00"
+    "countdowntime": "01/8/2026 11:00"
   },
 
-  {
-    "status": "Upcoming",
-    "image": "/TapExFlyer.png",
-    "title": "TapEx Fundraiser",
-    "date": "Tuesday, May 2 | 7:00 - 9:00PM PST",
-    "location": "Price Center",
-    "countdowntime": "05/02/2026 7:00"
-  },
-  {
-    "status": "Upcoming",
-    "image": "/TapExFlyer.png",
-    "title": "FedeX Fundraiser",
-    "date": "Tuesday, May 2 | 7:00 - 9:00PM PST",
-    "location": "Price Out",
-    "countdowntime": "05/02/2026 7:00"
-  },
   {
     "status": "Happening",
     "image": "/TapExFlyer.png",
     "title": "AI Ethics Roundtable",
     "date": "Monday, April 7 | 5:00 - 7:00PM PST",
     "location": "Center Hall 101",
-    "countdowntime": "04/07/2026 5:00"
+    "countdowntime": "04/07/2026 17:00"
   },
+
   {
     "status": "Happening",
     "image": "/TapExFlyer.png",
     "title": "Tech & Tacos Mixer",
     "date": "Tuesday, April 8 | 6:00 - 8:00PM PST",
     "location": "Warren Lawn",
-    "countdowntime": "04/08/2026 6:00"
+    "countdowntime": "04/08/2026 18:00"
   },
-  {
-    "status": "Upcoming",
-    "image": "/TapExFlyer.png",
-    "title": "Machine Learning Workshop",
-    "date": "Friday, April 12 | 2:00 - 4:00PM PST",
-    "location": "CSE Building",
-    "countdowntime": "04/12/2026 2:00"
-  },
-  {
-    "status": "Upcoming",
-    "image": "/TapExFlyer.png",
-    "title": "Resume Review Night",
-    "date": "Wednesday, April 17 | 5:30 - 7:30PM PST",
-    "location": "Price Center East",
-    "countdowntime": "04/17/2026 5:30"
-  },
+
   {
     "status": "Past",
     "image": "/TapExFlyer.png",
     "title": "Hackathon Kickoff",
     "date": "Saturday, March 10 | 9:00AM - 11:00AM PST",
     "location": "RIMAC Annex",
-    "countdowntime": "03/10/2026 9:00"
+    "countdowntime": "03/10/2026 21:00"
   },
+
   {
     "status": "Past",
     "image": "/TapExFlyer.png",
     "title": "AI Social Night",
     "date": "Thursday, March 15 | 6:00 - 9:00PM PST",
     "location": "Student Center",
-    "countdowntime": "03/15/2026 6:00"
+    "countdowntime": "03/15/2026 18:00"
   }
 ]
