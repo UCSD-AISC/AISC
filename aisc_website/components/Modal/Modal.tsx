@@ -32,11 +32,10 @@ return(
                     />
                 </div>
                 <div className="flex flex-row justify-center items-center gap-4 text-[#ededed]">
-                    {renderStatus(project.status)}
-                    <p className="text-body mb-6 flex justify-center items-center rounded-full bg-gray-600 px-2 w-fit">
-                        {project.stack}
-                    </p>
-                    </div>
+                  {input.renderStatus(input.status)}
+                  <p className="text-body mb-6 flex justify-center items-center rounded-full bg-gray-600 px-2 w-fit">
+                    {input.stack}
+                  </p>
                 </div>
                 <h3 className="mb-6 mt-2 text-center text-sky-400 text-3xl font-semibold">{input.title}</h3>
                     <p className="mb-6 text-body leading-9 max-w-2xl mx-auto text-left ml-6 mr-6 text-[#ededed]">{input.modalDescription}</p>
