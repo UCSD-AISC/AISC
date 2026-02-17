@@ -17,21 +17,21 @@ const Carousel = () => {
   }, [maxEvents]);
 
   return (
-    <section className="w-full px-6 md:px-20 py-20">
+    <section className="text-gray-800 dark:text-white w-full px-6 md:px-20 py-20">
       {/* Dots */}
       <div className="flex justify-center mb-8 gap-2">
         {events.slice(0, maxEvents).map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full border border-white ${
+            className={`w-3 h-3 rounded-full border border-black dark:border-white ${
               index === currentIndex ? "bg-pink-400" : "bg-transparent"
             }`}
           />
         ))}
       </div>
 
-      <h2 className="text-white text-lg font-semibold mb-8 tracking-widest">
+      <h2 className="text-lg font-semibold mb-8 tracking-widest">
         {event.status.toUpperCase()}
       </h2>
 
@@ -48,7 +48,7 @@ const Carousel = () => {
         </div>
 
         {/* Right side content */}
-        <div className="flex flex-col items-start text-white">
+        <div className="flex flex-col items-start">
           <h3 className="text-5xl md:text-6xl font-black mb-6">
             {event.title.toUpperCase()}
           </h3>

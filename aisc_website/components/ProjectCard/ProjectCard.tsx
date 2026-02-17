@@ -15,16 +15,28 @@ type project = {
 
 
 
-const Card = (project: project) => {
+const ProjectCard = (project: project) => {
   const renderStatus = (status: string) => {
-      if (status === "Active") {
-        return <p className="text-body mb-6 flex justify-center items-center rounded-full bg-green-600 px-2 w-fit text-white-900">{status}</p>;
-      } else if (status === "Recruiting") {
-        return <p className="text-body mb-6 flex justify-center items-center rounded-full bg-yellow-600 px-2 w-fit text-white-900">{status}</p>;
-      } else {
-        return <p className="text-body mb-6 flex justify-center items-center rounded-full bg-red-600 px-2 w-fit text-white-900">{status}</p>;
-      }
-    }; 
+    if (status === "Active") {
+      return (
+        <p className="text-body mb-6 flex justify-center items-center rounded-full bg-green-600 px-2 w-fit text-white">
+          {status}
+        </p>
+      );
+    } else if (status === "Recruiting") {
+      return (
+        <p className="text-body mb-6 flex justify-center items-center rounded-full bg-yellow-600 px-2 w-fit text-white">
+          {status}
+        </p>
+      );
+    } else {
+      return (
+        <p className="text-body mb-6 flex justify-center items-center rounded-full bg-red-600 px-2 w-fit text-white">
+          {status}
+        </p>
+      );
+    }
+  };
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -54,11 +66,16 @@ const Card = (project: project) => {
             className="object-contain"
           />
         </div>
+<<<<<<< HEAD:aisc_website/components/Card/Card.tsx
 
         <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 flex justify-center items-center text-white">
           {project.title}
         </h5>
 
+=======
+        <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 flex justify-center items-center text-indigo-400 dark:text-indigo-300
+">{project.title}</h5>
+>>>>>>> origin/main:aisc_website/components/ProjectCard/ProjectCard.tsx
         <div className="flex flex-row justify-center items-center">
           {renderStatus(project.status)}
         </div>
@@ -86,4 +103,4 @@ const Card = (project: project) => {
 );
 }
 
-export default Card;
+export default ProjectCard;
