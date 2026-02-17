@@ -66,16 +66,9 @@ const ProjectCard = (project: project) => {
             className="object-contain"
           />
         </div>
-<<<<<<< HEAD:aisc_website/components/Card/Card.tsx
-
         <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 flex justify-center items-center text-white">
           {project.title}
         </h5>
-
-=======
-        <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8 flex justify-center items-center text-indigo-400 dark:text-indigo-300
-">{project.title}</h5>
->>>>>>> origin/main:aisc_website/components/ProjectCard/ProjectCard.tsx
         <div className="flex flex-row justify-center items-center">
           {renderStatus(project.status)}
         </div>
