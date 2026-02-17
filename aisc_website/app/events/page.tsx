@@ -73,7 +73,7 @@ export default function EventsPage() {
                       >
                         <div
                           className={`flex-1 text-gray-800 dark:text-white ${
-                            event.image === null ? "max-w-4xl mb-20" : "max-w-xl"
+                            event.image === null ? "max-w-4xl mt-15 mb-15" : "max-w-xl"
                           } ${
                             !isEven ? "md:text-right md:ml-16" : "md:mr-16"
                           }`}
