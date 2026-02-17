@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import events from "@/lib/events.json";
 import { useState, useEffect, Fragment } from "react";
-import Countdown from "@/components/Countdown/Countdown";
 
 export default function EventsPage() {
   const [openCategory, setOpenCategory] = useState("");
@@ -44,7 +43,7 @@ export default function EventsPage() {
         {["Happening", "Upcoming", "Past"].map((category) => {
           const filteredEvents = events.filter(
             (event) => event.status === category
-          );
+          ).slice(0, 4);
           if (filteredEvents.length === 0) return null;
 
           return (
@@ -61,23 +60,21 @@ export default function EventsPage() {
                   {category} Events
                 </h2>
                 <div
-                  className={`transition-all duration-500 overflow-hidden ${
-                    openCategory === category
-                      ? "max-h-[2000px] opacity-100"
-                      : "max-h-0 opacity-0"
-                  }`}
+                  className={`transition-all duration-500 overflow-hidden ${openCategory !== category && "max-h-0 opacity-0"}`}
                 >
                   {filteredEvents.map((event, index) => {
                     const isEven = index % 2 === 0;
                     return (
                       <div
                         key={event.title}
-                        className={`animate-slide-in flex flex-col md:flex-row ${
+                        className={`animate-slide-in flex ${
                           !isEven ? "md:flex-row-reverse" : ""
                         } items-center justify-between gap-10 md:gap-20`}
                       >
                         <div
-                          className={`flex-1 text-gray-800 dark:text-white max-w-xl ${
+                          className={`flex-1 text-gray-800 dark:text-white ${
+                            event.image === null ? "max-w-4xl mt-15 mb-15" : "max-w-xl"
+                          } ${
                             !isEven ? "md:text-right md:ml-16" : "md:mr-16"
                           }`}
                         >
@@ -94,9 +91,9 @@ export default function EventsPage() {
                             {event.location}
                           </p>
                         </div>
-                        <div className="flex-1 w-full max-w-md group overflow-hidden">
+                        <div className={`flex-1 w-full max-w-md group overflow-hidden ${event.image === null && "hidden"}`}>
                           <Image
-                            src={event.image}
+                            src={`/event_images/${event.image}`}
                             alt={event.title}
                             width={600}
                             height={400}
