@@ -14,6 +14,10 @@ export default function EventsPage() {
     const times = split[1].split(" ");
     const startTime = new Date(split[0]+" "+year+" "+times[0]+" "+times[2].slice(-2)+" PST");
     const endTime = new Date(split[0]+" "+year+" "+times[2].slice(0,-2)+" "+times[2].slice(-2)+" PST");
+    // Edge case where startTime is supposed to be AM (Eg: "..| 11:00 - 2:30PM PST")
+    if (startTime > endTime) {
+      startTime.setHours(startTime.getHours() - 12);
+    }
     return [startTime, endTime]
   }
 
