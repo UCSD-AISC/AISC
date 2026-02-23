@@ -29,7 +29,7 @@ export default function EventsPage() {
   }
 
   function icsFileContent(
-    event: { title: string; location: string; date: string },
+    event: { status: string; title: string; location: string; date: string },
     startTime: Date,
     endTime: Date
   ) {
@@ -55,22 +55,20 @@ export default function EventsPage() {
   const now = new Date();
   const processedEvents = events.map((event) => {
       const [startTime, endTime] = dateParser(event.date);
-      let status: "Past" | "Upcoming" | "Happening";
       let icsDownloadUrl = "";
 
       if (endTime < now) {
-        status = "Past";
+        event.status = "Past";
       } else if (now < startTime) {
-        status = "Upcoming";
+        event.status = "Upcoming";
         const icsContent = icsFileContent(event, startTime, endTime);
         icsDownloadUrl = `data:text/calendar;charset=utf-8,${encodeURIComponent(icsContent)}`;
       } else {
-        status = "Happening";
+        event.status = "Happening";
       }
 
       return {
         ...event,
-        status,
         icsDownloadUrl,
         startTime,
       };

@@ -1,5 +1,6 @@
 [
   {
+    "status": "Past",
     "image": "DataVisualizationsWorkshop.png",
     "title": "Technical Workshop: Data Visualizations (Matplotlib & Seaborn)",
     "date": "Wednesday, February 18 | 5:00 - 6:00PM PST",
@@ -8,6 +9,7 @@
   },
 
   {
+    "status": "Past",
     "image": "AISC_-_Introduction_to_Kaggle_Competitions_Worshop.png",
     "title": "Technical Workshop: Getting Started with Kaggle Competitions",
     "date": "Thursday, February 19 | 5:00 - 6:00PM PST",
@@ -16,6 +18,7 @@
   },
 
   {
+    "status": "Past",
     "image": "envision.jpg",
     "title": "Envision 2026 Showcase",
     "date": "Saturday, February 21 | 1:00 - 2:00PM PST",
@@ -24,6 +27,7 @@
   },
 
   {
+    "status": "Upcoming",
     "image": "SonataSimonaitis-Boyd.png",
     "title": "Guest Speaker Sonata Simonaitis-Boyd",
     "date": "Thursday, February 26 | 5:00 - 6:00PM PST",
@@ -32,6 +36,7 @@
   },
 
   {
+    "status": "Past",
     "image": "EngineersOnTheGreenFlyer.png",
     "title": "Engineers on the Green",
     "date": "Thursday, January 8 | 11:00 - 2:30PM PST",
