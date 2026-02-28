@@ -1,53 +1,35 @@
 "use client";
 
 import events from "@/lib/events.json";
-import { parse } from "path";
 import { useEffect, useState } from "react";
 
-function parseCountdown(s: string): Date {
-    const [datePart, timePart] = s.split(" ");
-    const [month, day, year] = datePart.split("/").map(Number);
-    const [hour, minute] = timePart.split(":").map(Number);
-    return new Date(year, month - 1, day, hour, minute);
-}
+const parseCountdown = (s: string) => {
+  const [mdy, hm] = s.trim().split(" ");
+  const [MM, DD, YYYY] = mdy.split("/");
+  const [H, m] = hm.split(":");
+  return new Date(`${YYYY}-${MM}-${DD}T${H.padStart(2,"0")}:${m}:00`);
+};
+
 
 const Countdown = () => {
-    const sortedEvents = [...events].sort(
-      (a, b) =>
-        parseCountdown(a.countdowntime).getTime() -
-        parseCountdown(b.countdowntime).getTime()
-    );
+    const event = events.filter(e => parseCountdown(e.countdowntime) > new Date())
+.sort((a,b) => parseCountdown(a.countdowntime).getTime() - parseCountdown(b.countdowntime).getTime())[0];
 
-    const now = Date.now();
-
-    const nextEvent =
-      sortedEvents.find(
-      (e) => parseCountdown(e.countdowntime).getTime() > now
-    ) || sortedEvents[0];
-
-    const date = parseCountdown(nextEvent.countdowntime);
+    const date = new Date(event.countdowntime);
 
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
-    const [currentEvent, setCurrentEvent] = useState(nextEvent);
 
     
 
     useEffect(() =>{
+        if (!event) return;
+
         const interval = setInterval(() =>{
-
-
-            const nowMs = Date.now();
-
-            const next =
-            sortedEvents.find(
-            (e) => parseCountdown(e.countdowntime).getTime() > nowMs
-            ) || sortedEvents[0];
-
-            setCurrentEvent(next);
-
-            const difference = parseCountdown(next.countdowntime).getTime() - nowMs;
+            const now = Date.now();
+            const target = parseCountdown(event.countdowntime).getTime();
+            const difference = target - now;
 
             const d = Math.floor(difference / (1000 * 60 * 60 * 24));
             setDays(d);
@@ -62,7 +44,7 @@ const Countdown = () => {
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [sortedEvents]);
+    }, [event?.countdowntime]);
 
 
     return (
@@ -72,7 +54,7 @@ const Countdown = () => {
             Come See Us At
         </span> 
         <span className="text-blue-400 dark:text-blue-300 text-2xl sm:text-6xl font-black text-center tracking-widest px-2">
-          {currentEvent.title}
+          {event.title}
         </span>
         <div className="flex justify-center gap-3 sm:gap-8">
             {/* "hours" card */}
