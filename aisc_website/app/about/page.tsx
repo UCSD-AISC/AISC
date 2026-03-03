@@ -178,7 +178,7 @@ export default function AboutPage() {
                   "hover:bg-neutral-tertiary-medium hover:text-heading",
                   "focus:ring-4 focus:ring-purple-600/60 focus:outline-none",
                   "shadow-xs font-medium rounded-2xl text-sm px-4 py-2.5",
-                  "hover:scale-[1.1] transition cursor-pointer",
+                  "hover:scale-[1.1] transition cursor-pointer active:scale-95",
                 isActive ? "bg-purple-600/90 shadow-[0_0_20px_rgba(168,85,247,0.25)]" : "",
                 ].join(" ")}
                   >
