@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="w-full px-6 md:px-20 py-10 dark:text-white flex flex-col md:flex-row justify-between items-center">
       {/* Left side text */}
-      <p className="text-sm mb-4 md:mb-0">AISC © 2025</p>
+      <p className="text-sm mb-4 md:mb-0">AISC © 2026</p>
 
       {/* Social icons */}
       <div className="flex gap-4 filter-[invert(var(--invert-perc))] dark:filter-none">
@@ -22,7 +22,7 @@ const Footer = () => {
           />
         </Link>
         <Link
-          href="https://www.linkedin.com/company/ai-student-collective/posts/?feedView=all"
+          href="https://www.linkedin.com/company/ai-student-collective-at-uc-san-diego/"
           target="_blank"
           rel="noopener noreferrer"
         >
