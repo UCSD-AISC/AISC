@@ -11,11 +11,32 @@ const parseCountdown = (s: string) => {
 };
 
 
-const Countdown = () => {
-    const event = events.filter(e => parseCountdown(e.countdowntime) > new Date())
-.sort((a,b) => parseCountdown(a.countdowntime).getTime() - parseCountdown(b.countdowntime).getTime())[0];
+type EventItem = {
+  status: string;
+  image: string;
+  title: string;
+  date: string;
+  location: string;
+  countdowntime: string;
+};
 
-    const date = new Date(event.countdowntime);
+const now = new Date();
+
+// get all upcoming events (future only), sorted soonest -> latest
+const upcomingEvents = (events as EventItem[])
+  .filter((e) => parseCountdown(e.countdowntime) > now)
+  .sort(
+    (a, b) =>
+      parseCountdown(a.countdowntime).getTime() -
+      parseCountdown(b.countdowntime).getTime()
+  );
+
+// pick what to show:
+// 0 -> null (hide), 1 -> that one, 2+ -> soonest (index 0)
+const event: EventItem | null = upcomingEvents[0] ?? null;
+
+const Countdown = () => {
+if (!event) return null; // hide countdown if no upcoming events
 
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
