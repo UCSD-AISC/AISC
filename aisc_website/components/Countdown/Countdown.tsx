@@ -16,7 +16,6 @@ const Countdown = () => {
     useEffect(() =>{
         const interval = setInterval(() =>{
 
-
             const now = new Date()
             const difference = date.getTime() - now.getTime();
 
