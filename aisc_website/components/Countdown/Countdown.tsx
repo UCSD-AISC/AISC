@@ -70,7 +70,7 @@ if (!event) return null; // hide countdown if no upcoming events
 
     return (
     // countdown container
-      <div className="flex flex-col items-center justify-center w-full h-full gap-8 sm:gap-8 mt-20 mb-24">
+      <div className={`${days === 0 && hours === 0 && minutes === 0 ? "hidden" : "flex"} flex-col items-center justify-center w-full h-full gap-8 sm:gap-8 mt-20 mb-24`}>
         <span className="text-blue-400 dark:text-blue-300 text-2xl sm:text-3xl font-semibold text-center tracking-widest px-2">
             Come See Us At
         </span> 
