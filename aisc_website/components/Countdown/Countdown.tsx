@@ -44,27 +44,29 @@ if (!event) return null; // hide countdown if no upcoming events
 
     
 
-    useEffect(() =>{
-        if (!event) return;
+    useEffect(() => {
+      if (!event) return;
 
-        const interval = setInterval(() =>{
-            const now = Date.now();
-            const target = parseCountdown(event.countdowntime).getTime();
-            const difference = target - now;
+      const interval = setInterval(() => {
+        const now = Date.now();
+        const target = parseCountdown(event.countdowntime).getTime();
+        const difference = target - now;
 
-            const d = Math.floor(difference / (1000 * 60 * 60 * 24));
-            setDays(d);
+        const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+        setDays(d);
 
-            const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            setHours(h);
+        const h = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        setHours(h);
 
-            const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            setMinutes(m);
-            
+        const m = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        setMinutes(m);
+      }, 1000);
 
-        }, 1000);
-
-        return () => clearInterval(interval);
+      return () => clearInterval(interval);
     }, [event?.countdowntime]);
 
 

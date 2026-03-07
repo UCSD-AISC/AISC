@@ -2,13 +2,13 @@
   {
     "index": 0,
     "title": "Mushroom Edibility Detector",
-    "cardDescription": "This project uses computer vision to classify mushrooms as edible or poisonous based on their features",
-    "modalDescription": "Ever wondered which mushrooms are safe to eat? This project uses machine learning to classify mushrooms as edible or poisonous based on their features. We gather publicly available mushroom data on iNaturalist and other sites, explore it to understand common patterns and limitations, and train a model to learn visual cues that separate the two categories. Then, we evaluate how well the model performs, look closely at where it gets confused, and discuss the safety and ethical concerns of using predictions in a real-world context. Using machine learning can help people make informed decisions about which mushrooms are safe to consume.",
+    "cardDescription": "An interactive web-based game where users compete against a convolutional neural network to classify mushroom images as edible or poisonous",
+    "modalDescription": "The project combines a PyTorch-trained image classification model with a lightweight web interface that presents random mushroom images, collects user guesses, and displays both human and model predictions alongside running scores. By framing model inference as a quiz-style experience, the platform provides an engaging way to explore computer vision performance while highlighting uncertainty, safety considerations, and common failure cases in automated biological classification.",
     "contributors": [
-      "Shant",
-      "Andrew"
+      "Shant Guedekelian",
+      "Andrew Park"
     ],
-    "stack": "Python",
+    "stack": ["Python", "PyTorch", "Flask", "HTML", "JS"],
     "status": "Active",
     "link": "https://github.com/shantguedekelian/Mushroom_Edibility_Predictor",
     "img": "/mushroom.jpg"
@@ -16,13 +16,13 @@
   {
     "index": 1,
     "title": "NBA Court Geometry Modeling",
-    "cardDescription": "This project uses machine learning to look at NBA analytics and player performances",
-    "modalDescription": "The game of basketball is evolving. This project investigates how changes to NBA court geometry can be used to counter modern three-point inflation and restore stylistic balance in professional basketball. Using historical NBA shot-tracking and player performance data, the project builds artificial intelligence simulations and machine-learning probability models to estimate shot difficulty and shot selection. By simulating counterfactual court designs—such as extending the three-point arc or widening the baselines—the system evaluates how teams would adapt their offensive strategies under new spatial constraints.",
+    "cardDescription": "Redesigning the NBA court dimensions to restore offensive strategic diversity",
+    "modalDescription": "This AISC Winter project investigates how changes to NBA court geometry can be used to counter modern three-point inflation and restore stylistic balance in professional basketball. Using historical NBA shot-tracking and player performance data, the project uses machine-learning probability models to estimate points per game with respect to changing 3 point arc radiuses and individual player shot selection as functions of court dimensions. We then built artificial intelligence simulations to investigate how 5v5 team oriented basketball would play under different court dimensions.",
     "contributors": [
-      "Emmanuel",
-      "Anthony"
+      "Emmanuel Viray",
+      "Anthony Abumanneh"
     ],
-    "stack": "Python",
+    "stack":["Python", "PyTorch","Pandas", "Matplotlib", "Scikit-learn"] ,
     "status": "Active",
     "link": "https://github.com/emjviray/BasketballEngineering",
     "img": "/nba.jpg"
@@ -36,7 +36,7 @@
       "Shreya",
       "Lucas"
     ],
-    "stack": "Python",
+    "stack": ["Python"],
     "status": "Active",
     "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/machinelearning.avif"
@@ -53,7 +53,7 @@
       "Arnav Kamdar",
       "Caleb Li"
     ],
-    "stack": "Python",
+    "stack": ["Python"],
     "status": "Completed",
     "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/colored_logo.png"
@@ -69,7 +69,7 @@
       "Sophia Fang",
       "Borna Hematty"
     ],
-    "stack": "Python",
+    "stack": ["Python"],
     "status": "Completed",
     "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/colored_logo.png"
@@ -79,21 +79,21 @@
     "title": "Website Development",
     "cardDescription": "The development of this website! It was made with NextJS, Typescript, Tailwind, and love.",
     "modalDescription": "This project involves our website development! It was made with NextJS, Typescript, Tailwind, and love. The website serves as a platform to showcase our projects, share updates, and connect with the community. It is designed to be user-friendly and visually appealing, providing an engaging experience for visitors.",
-    "contributors": ["Sadrac Santacruz Ibarra", "Rohan Sachdeva"],
-    "stack": "Python",
-    "status": "Completed",
+    "contributors": ["Rahul Punji", "Jaehee Kim", "Syd Verma", "Karim Barajas", "Toby Chin", "Shashwat Dudeja"],
+    "stack": ["JS", "HTML", "CSS","React", "Tailwind"],
+    "status": "Recruiting",
     "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/colored_logo.png"
   },
-  {
+    {
     "index":6,
-    "title": "Website Development",
-    "cardDescription": "The development of this website! It was made with NextJS, Typescript, Tailwind, and love.",
-    "modalDescription": "This project involves our website development! It was made with NextJS, Typescript, Tailwind, and love. The website serves as a platform to showcase our projects, share updates, and connect with the community. It is designed to be user-friendly and visually appealing, providing an engaging experience for visitors.",
-    "contributors": ["Sadrac Santacruz Ibarra", "Rohan Sachdeva"],
-    "stack": "Python",
-    "status": "Recruiting",
-    "link": "https://github.com/UCSD-AISC/AISC",
+    "title": "AscendQuiz",
+    "cardDescription": "Put any PDF you want to make into a quiz you can study!",
+    "modalDescription": "A quizzing app that converts any PDF into an adaptive, mastery-based quiz. An AI analyzes the uploaded document and uses its knowledge base to generate a quiz that adjusts to the quiz-taker’s level, and assesses based on “mastery” instead of a grade. Designed for education, but can be used with any document.",
+    "contributors": ["Adi Arora", "Ashley Zhou", "Tom Ragus"],
+    "stack": ["Python","JSON","SQL", "Streamlit"],
+    "status": "Active",
+    "link": "https://github.com/tomragus/computer-adaptive-mastery-quiz",
     "img": "/colored_logo.png"
   }
 ]
