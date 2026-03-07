@@ -84,6 +84,16 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
             </li>
             <li>
               <Link
+                href="/members"
+                className={`${
+                  pathname === "/members" ? "text-purple-500 dark:text-purple-400" : ""
+                } hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200`}
+              >
+                MEMBERS
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/projects"
                 className={`${
                   pathname === "/projects" ? "text-purple-500 dark:text-purple-400" : ""
