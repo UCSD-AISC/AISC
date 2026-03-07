@@ -3,9 +3,40 @@
 import events from "@/lib/events.json";
 import { useEffect, useState } from "react";
 
+const parseCountdown = (s: string) => {
+  const [mdy, hm] = s.trim().split(" ");
+  const [MM, DD, YYYY] = mdy.split("/");
+  const [H, m] = hm.split(":");
+  return new Date(`${YYYY}-${MM}-${DD}T${H.padStart(2,"0")}:${m}:00`);
+};
+
+
+type EventItem = {
+  status: string;
+  image: string;
+  title: string;
+  date: string;
+  location: string;
+  countdowntime: string;
+};
+
+const now = new Date();
+
+// get all upcoming events (future only), sorted soonest -> latest
+const upcomingEvents = (events as EventItem[])
+  .filter((e) => parseCountdown(e.countdowntime) > now)
+  .sort(
+    (a, b) =>
+      parseCountdown(a.countdowntime).getTime() -
+      parseCountdown(b.countdowntime).getTime()
+  );
+
+// pick what to show:
+// 0 -> null (hide), 1 -> that one, 2+ -> soonest (index 0)
+const event: EventItem | null = upcomingEvents[0] ?? null;
+
 const Countdown = () => {
-    const event = events;
-    const date = new Date(event[0].countdowntime);
+if (!event) return null; // hide countdown if no upcoming events
 
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
@@ -13,36 +44,40 @@ const Countdown = () => {
 
     
 
-    useEffect(() =>{
-        const interval = setInterval(() =>{
+    useEffect(() => {
+      if (!event) return;
 
-            const now = new Date()
-            const difference = date.getTime() - now.getTime();
+      const interval = setInterval(() => {
+        const now = Date.now();
+        const target = parseCountdown(event.countdowntime).getTime();
+        const difference = target - now;
 
-            const d = Math.floor(difference / (1000 * 60 * 60 * 24));
-            setDays(d);
+        const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+        setDays(d);
 
-            const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            setHours(h);
+        const h = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        setHours(h);
 
-            const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            setMinutes(m);
-            
+        const m = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        setMinutes(m);
+      }, 1000);
 
-        });
-
-        return () => clearInterval(interval);
-    }, []);
+      return () => clearInterval(interval);
+    }, [event?.countdowntime]);
 
 
     return (
     // countdown container
-      <div className="flex flex-col items-center justify-center w-full h-full gap-8 sm:gap-8 mt-20 mb-24">
+      <div className={`${days === 0 && hours === 0 && minutes === 0 ? "hidden" : "flex"} flex-col items-center justify-center w-full h-full gap-8 sm:gap-8 mt-20 mb-24`}>
         <span className="text-blue-400 dark:text-blue-300 text-2xl sm:text-3xl font-semibold text-center tracking-widest px-2">
             Come See Us At
         </span> 
         <span className="text-blue-400 dark:text-blue-300 text-2xl sm:text-6xl font-black text-center tracking-widest px-2">
-          {event[0].title}
+          {event.title}
         </span>
         <div className="flex justify-center gap-3 sm:gap-8">
             {/* "hours" card */}
