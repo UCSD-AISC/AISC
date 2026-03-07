@@ -9,19 +9,25 @@ interface NavbarProps {
 }
 
 const colors = {
-  default: "_-gray-800 dark:_-white",
-  white: "_-white",
-  black: "_-gray-800",
-}
+  default: {
+    textColor: "text-gray-800 dark:text-white",
+    bgColor: "bg-gray-800 dark:bg-white",
+  },
+  white: {
+    textColor: "text-white",
+    bgColor: "bg-white",
+  },
+  black: {
+    textColor: "text-gray-800",
+    bgColor: "bg-gray-800",
+  },
+} as const;
 
 const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const getColor = (property: string) => colors[color].replaceAll("_", property);
-
-  const textColor = getColor("text");
-  const bgColor = getColor("bg");
+  const { textColor, bgColor } = colors[color];
 
   return (
     <nav className="bg-transparent px-8 py-4 relative z-50">
@@ -156,7 +162,9 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
           </button>
           <Link
             href="/"
-            className="hover:text-purple-400 transition-colors duration-200"
+            className={`${
+              pathname === "/" ? "text-purple-400" : ""
+            } hover:text-purple-400 transition-colors duration-200`}
           >
             HOME
           </Link>
