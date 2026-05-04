@@ -29,64 +29,33 @@
   },
   {
     "index": 2,
-    "title": "Machine Learning Interpretability",
-    "cardDescription": "This project is focused on Machine Learning Interpretability.",
-    "modalDescription": "This project aims to make machine learning models more interpretable and understandable to users. By developing techniques and tools for visualizing and explaining model predictions, we can help users gain insights into how models make decisions and build trust in their outputs.",
+    "title": "MediRare",
+    "cardDescription": "MediRare is a multimodal AI system that mines medical literature figures and case reports to surface hidden misdiagnosis patterns in rare autoimmune diseases.",
+    "modalDescription": "MediRare is a multimodal AI system that mines medical literature figures and case reports to surface hidden misdiagnosis patterns in rare autoimmune diseases. It combines computer vision to extract insights from published medical figures, NLP to map misdiagnosis trails from PubMed case reports, and an LLM reasoning agent to connect signals across diseases generating research-ready reports for clinicians and scientists. The system targets rare autoimmune conditions like Lupus, Sjögren's, and MCTD where patients wait 6+ years for a correct diagnosis.",
     "contributors": [
-      "Shreya",
-      "Lucas"
+      "Sanjana Garimella",
+      "Ashley Zhou",
+      "Garv Lamba",
+      "Timothy Chen",
+      "Alexander Gilbreath",
+      "Ethan Baquiran",
+      "Ethan Pham",
+      "Tony Wang"
     ],
-    "stack": ["Python"],
+    "stack": [
+      "Python",
+      "PyTorch",
+      "HuggingFace",
+      "vLLM",
+      "MCP",
+      "LangChain"
+    ],
     "status": "Active",
-    "link": "https://github.com/UCSD-AISC/AISC",
-    "img": "/machinelearning.avif"
+    "link": "https://github.com/sanjana-garimella/MediRare",
+    "img": "/nature.jpg"
   },
   {
-    "index": 3,
-    "title": "Data Validation Pipeline",
-    "cardDescription": "A service that helps people gather image data through crowdsources contributions; composed of UI, NLP pipeline, and Validation pipeline components.",
-    "modalDescription": "This project focuses on building a data validation pipeline to ensure the quality and reliability of image data collected from crowdsourced contributions. The pipeline includes components for user interface design, natural language processing, and data validation to streamline the data collection process.",
-    "contributors": [
-      "Saarthak Trivedi",
-      "Kenzo Ku",
-      "Holly Zhu",
-      "Arnav Kamdar",
-      "Caleb Li"
-    ],
-    "stack": ["Python"],
-    "status": "Completed",
-    "link": "https://github.com/UCSD-AISC/AISC",
-    "img": "/colored_logo.png"
-  },
-  {
-    "index": 4,
-    "title": "Discord Bot",
-    "cardDescription": "A reinforcement learning powered bot to help moderate the spam and inappropriate content in the servers it is placed in.",
-    "modalDescription": "This project involves creating a Discord bot that uses reinforcement learning to identify and moderate spam and inappropriate content in real-time. By training the bot on various examples of acceptable and unacceptable content, we can help maintain a positive and safe environment for users.",
-    "contributors": [
-      "Dario Tzeng",
-      "Amogh Manjunath",
-      "Sophia Fang",
-      "Borna Hematty"
-    ],
-    "stack": ["Python"],
-    "status": "Completed",
-    "link": "https://github.com/UCSD-AISC/AISC",
-    "img": "/colored_logo.png"
-  },
-  {
-    "index":5,
-    "title": "Website Development",
-    "cardDescription": "The development of this website! It was made with NextJS, Typescript, Tailwind, and love.",
-    "modalDescription": "This project involves our website development! It was made with NextJS, Typescript, Tailwind, and love. The website serves as a platform to showcase our projects, share updates, and connect with the community. It is designed to be user-friendly and visually appealing, providing an engaging experience for visitors.",
-    "contributors": ["Rahul Punji", "Jaehee Kim", "Syd Verma", "Karim Barajas", "Toby Chin", "Shashwat Dudeja"],
-    "stack": ["JS", "HTML", "CSS","React", "Tailwind"],
-    "status": "Recruiting",
-    "link": "https://github.com/UCSD-AISC/AISC",
-    "img": "/colored_logo.png"
-  },
-    {
-    "index":6,
+    "index":3,
     "title": "AscendQuiz",
     "cardDescription": "Put any PDF you want to make into a quiz you can study!",
     "modalDescription": "A quizzing app that converts any PDF into an adaptive, mastery-based quiz. An AI analyzes the uploaded document and uses its knowledge base to generate a quiz that adjusts to the quiz-taker’s level, and assesses based on “mastery” instead of a grade. Designed for education, but can be used with any document.",
@@ -94,6 +63,99 @@
     "stack": ["Python","JSON","SQL", "Streamlit"],
     "status": "Active",
     "link": "https://github.com/tomragus/computer-adaptive-mastery-quiz",
+    "img": "/colored_logo.png"
+  },
+  {
+    "index": 4,
+    "title": "HealthLink",
+    "cardDescription": "This project is a symptom tracking dashboard that lets users log how they’re feeling over time through a simple interface.",
+    "modalDescription": "This project is a symptom tracking dashboard that lets users log how they’re feeling over time through a simple interface. The system organizes entries into visual timelines and identifies trends in symptom frequency, severity, and potential triggers. An AI component then generates concise, doctor-ready summaries that turn unstructured logs into clear, actionable insights.",
+    "contributors": [
+      "Shant Guedekelian"
+    ],
+    "stack": [
+      "Streamlit",
+      "Flask",
+      "SQL",
+      "FastAPI",
+      "LLM API Integration"
+    ],
+    "status": "Active",
+    "link": "https://github.com/shantguedekelian/HealthLink",
+    "img": "/colored_logo.png"
+  },
+  {
+    "index": 5,
+    "title": "GCH - drug Side effect predictor",
+    "cardDescription": "This project aims to create a model that can predict drug side effects in specific patients without the need for clinical trials.",
+    "modalDescription": "This project aims to create a model that can predict drug side effects in specific patients without the need for clinical trials. The model received information about a specific patient (age, weight, sex, blood_type, medical_history, ect) as well as certain drug (along with its chemical structure) as input. Then, using transformer neural networks it outputs a list of side effects the patient can potentially experience along with a probability for each one.",
+    "contributors": [
+      "Anthony Abumanneh",
+      "Emmanuel Viray"
+    ],
+    "stack": [
+      "PyTorch",
+      "Pandas",
+      "NumPy"
+    ],
+    "status": "Active",
+    "link": "https://github.com/AnthonyAbumanneh/GCH",
+    "img": "/colored_logo.png"
+  },
+  {
+    "index": 6,
+    "title": "CI Failure Intelligence System",
+    "cardDescription": "An AI system that analyzes CI/CD workflows and logs to predict failures, identify root causes, and discover recurring failure patterns over time.",
+    "modalDescription": "The system models pipelines as structured workflows, learns from historical runs, and uses both log signals and workflow context to localize the true origin of failures and understand how they propagate. It then provides actionable insights, including explanations, fix suggestions, and long-term pipeline improvements to reduce future failures.",
+    "contributors": [
+      "Jonathan Gu"
+    ],
+    "stack": [
+      "Python",
+      "Scikit-learn",
+      "PyTorch",
+      "TensorFlow"
+    ],
+    "status": "Active",
+    "link": "https://github.com/jgu0453/CI-Failure-Intelligence-System",
+    "img": "/colored_logo.png"
+  },
+  {
+    "index": 7,
+    "title": "Fluorescent Image Analysis/ Coral Identification",
+    "cardDescription": "This project is a collaboration with Dr. Wangpraseurt's lab at Scripps Institute of Oceanography - the task is to automate coral segmentation/identification using 3D photogrammetry model data.",
+    "modalDescription": "In collaboration with Dr. Wangpraseurt's lab at Scripps Institute of Oceanography, the project team is automating coral segmentation/identification using 3D photogrammetry model data. Using the Open3D python library, they are developing a pipeline that can distinguish coral tissue from substrate and algae growth, crop/isolate individual coral colonies, and export isolated coral 3D models for morphological analysis.",
+    "contributors": [
+      "Tom Ragus",
+      "Valmik Nahata",
+      "Toby Zhang",
+      "Aditya Singh",
+      "Sharana Sabesan",
+      "Ethan Pham",
+      "Shreya Hiremath"
+    ],
+    "stack": [
+      "Open3D",
+      "NumPy",
+      "Plotly",
+      "PIL",
+      "CV2",
+      "Matplotlib",
+      "Google Colab"
+    ],
+    "status": "Active",
+    "link": "https://github.com/ekpham18/AISC-Coral-Identification/tree/main",
+    "img": "/coral.webp"
+  },
+  {
+    "index":8,
+    "title": "Website Development",
+    "cardDescription": "The development of this website! It was made with NextJS, Typescript, Tailwind, and love.",
+    "modalDescription": "This project involves our website development! It was made with NextJS, Typescript, Tailwind, and love. The website serves as a platform to showcase our projects, share updates, and connect with the community. It is designed to be user-friendly and visually appealing, providing an engaging experience for visitors.",
+    "contributors": ["Rahul Punji", "Jaehee Kim", "Syd Verma", "Karim Barajas", "Toby Chin", "Shashwat Dudeja"],
+    "stack": ["JS", "HTML", "CSS","React", "Tailwind"],
+    "status": "Recruiting",
+    "link": "https://github.com/UCSD-AISC/AISC",
     "img": "/colored_logo.png"
   }
 ]
