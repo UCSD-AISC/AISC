@@ -40,7 +40,7 @@ export default function EventsPage() {
       'PRODID:-//AISC//AISC Events//EN',
       'BEGIN:VEVENT',
       'UID:' + encodeURIComponent(`${event.title}-${event.date}`),
-      'DTSTAMP:' + toICSDateTime(new Date()),
+      'DTSTAMP:' + toICSDateTime(startTime),
       'DTSTART:' + toICSDateTime(startTime),
       'DTEND:' + toICSDateTime(endTime),
       'SUMMARY:' + event.title,

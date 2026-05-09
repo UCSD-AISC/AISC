@@ -22,7 +22,7 @@ export default function Home() {
             ARTIFICIAL INTELLIGENCE STUDENT COLLECTIVE
           </h1>
           <p className="text-sm md:text-base dark:text-gray-300 mb-4 font-[var(--font-bai-jamjuree)]">
-            Powered by Humans For AI
+            Powered by AI Collective
           </p>
           <p className="text-base md:text-lg font-[var(--font-bai-jamjuree)]">
             Creating a future of AI literacy for all.

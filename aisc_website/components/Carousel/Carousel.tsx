@@ -14,7 +14,7 @@ const Carousel = () => {
     }, 10000); // 10 seconds
 
     return () => clearInterval(interval);
-  }, [maxEvents]);
+  }, [maxEvents, currentIndex]);
 
   return (
     <section className="text-gray-800 dark:text-white w-full px-6 md:px-20 py-20">

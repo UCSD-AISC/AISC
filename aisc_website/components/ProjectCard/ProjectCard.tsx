@@ -8,7 +8,7 @@ type project = {
   modalDescription: string;
   contributors: string[];
   link: string;
-  stack: string;
+  stack: string[];
   status: string;
   img: string;
 };
@@ -19,19 +19,19 @@ const ProjectCard = (project: project) => {
   const renderStatus = (status: string) => {
     if (status === "Active") {
       return (
-        <p className="text-body mb-6 flex justify-center items-center rounded-full bg-green-600 px-2 w-fit text-white">
+        <p className="text-body mb-6 flex justify-center items-center rounded-full bg-green-600 px-3 py-1 w-fit text-white text-md">
           {status}
         </p>
       );
     } else if (status === "Recruiting") {
       return (
-        <p className="text-body mb-6 flex justify-center items-center rounded-full bg-yellow-600 px-2 w-fit text-white">
+        <p className="text-body mb-6 flex justify-center items-center rounded-full bg-yellow-600 px-3 py-1 w-fit text-white text-md">
           {status}
         </p>
       );
     } else {
       return (
-        <p className="text-body mb-6 flex justify-center items-center rounded-full bg-red-600 px-2 w-fit text-white">
+        <p className="text-body mb-6 flex justify-center items-center rounded-full bg-red-600 px-3 py-1 w-fit text-white text-md">
           {status}
         </p>
       );
