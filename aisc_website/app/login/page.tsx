@@ -61,7 +61,7 @@ export default function LoginPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-[calc(100vh-100px)] flex items-center justify-center px-4 font-[var(--font-bai-jamjuree)]">
+      <div className="min-h-[calc(100vh-100px)] flex items-center justify-center px-4 animate-fade-in-hard font-[var(--font-bai-jamjuree)]">
         <div className="w-full max-w-md bg-gray-900/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl p-8 relative overflow-hidden">
           {/* Decorative elements */}
           <div className="absolute -top-10 -right-10 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl pointer-events-none"></div>

@@ -155,6 +155,16 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
               </Link>
             </li>
             <li>
+              <Link
+                href="/admin/events"
+                className={`${
+                  pathname === "/admin/events" ? "text-purple-500 dark:text-purple-400" : ""
+                } hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200`}
+              >
+                ADMIN
+              </Link>
+            </li>
+            <li>
               <a
                 href="https://www.aicollective.com/"
                 target="_blank"
