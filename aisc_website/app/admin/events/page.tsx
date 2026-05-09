@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import Button from "@/components/Button/Button";
 import Footer from "@/components/Footer/Footer";
+import { uploadEventImage } from "@/lib/admin-events";
 
 import { useState } from "react";
 import { count } from "console";
@@ -11,7 +12,6 @@ export default function AdminEventsLayout() {
   const [formData, setFormData] = useState({
     title: "",
     date: "",
-    time: "",
     location: "",
     image: null as File | null,
     countdowntime: "",
@@ -43,13 +43,49 @@ export default function AdminEventsLayout() {
     }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    console.log("Submitted Event:", formData);
+    let imageUrl = "";
+    if (formData.image) {
+      try {
+        const uploadResult = await uploadEventImage(formData.image);
+        imageUrl = uploadResult.url;
+      } catch (err) {
+        alert("Image upload failed");
+        return;
+      }
+    }
 
-    // Later:
-    // createEvent(formData)
+    const eventPayload = {
+      title: formData.title,
+      date: formData.date,
+      location: formData.location,
+      status: formData.status,
+      countdowntime: formData.countdowntime,
+      imageUrl: imageUrl,
+    };
+
+    try {
+      const res = await fetch("/api/admin/create-event", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(eventPayload),
+      });
+      if (!res.ok) throw new Error("Event creation failed");
+      alert("Event created!");
+      setFormData({
+        title: "",
+        date: "",
+        location: "",
+        image: null,
+        countdowntime: "",
+        status: "",
+        isPublished: true,
+      });
+    } catch (err) {
+      alert("Event creation failed");
+    }
   }
 
   return (
@@ -99,7 +135,7 @@ export default function AdminEventsLayout() {
         </div>
         </div>
 
-        {/* DATE + TIME */}
+        {/* DATE*/}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block mb-2 font-semibold">
@@ -113,21 +149,6 @@ export default function AdminEventsLayout() {
               onChange={handleChange}
               className="w-full border border-gray-300 dark:border-neutral-700 bg-transparent rounded-xl p-3"
               required
-            />
-          </div>
-
-          <div>
-            <label className="block mb-2 font-semibold">
-              Time
-            </label>
-
-            <input
-              type="text"
-              name="time"
-              value={formData.time}
-              onChange={handleChange}
-              placeholder="Ex: 6:00 PM"
-              className="w-full border border-gray-300 dark:border-neutral-700 bg-transparent rounded-xl p-3"
             />
           </div>
         </div>
@@ -184,18 +205,9 @@ export default function AdminEventsLayout() {
               Selected: {formData.image.name}
             </p>
           )}
-        </div>
-
-        {/* PUBLISH */}
-        <div className="flex items-center gap-3">
-          <input
-            type="checkbox"
-            name="isPublished"
-            checked={formData.isPublished}
-            onChange={handleChange}
-          />
-
-          <label>Publish Event</label>
+          <p className="mt-1 text-xs text-gray-400">
+            Anyone can upload an image. Please do not upload sensitive content.
+          </p>
         </div>
 
         {/* SUBMIT BUTTON */}

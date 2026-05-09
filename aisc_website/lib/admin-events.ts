@@ -4,50 +4,64 @@ export type EventData = {
   id?: string;
   title: string;
   date: string;
-  time: string;
   location: string;
-  countdowntime?: string;
-  status?: string;
+  status: string;
+  countdowntime: string;
   imageUrl?: string;
-  isPublished: boolean;
 };
 
 export async function createEvent(event: EventData) {
   const { data, error } = await supabase
-    .from("events")
+    .from("Events")
     .insert([
       {
         title: event.title,
         date: event.date,
-        time: event.time,
         location: event.location,
-        countdown_time: event.countdowntime,
         status: event.status,
-        image_url: event.imageUrl,
-        is_published: event.isPublished,
+        countdowntime: event.countdowntime,
       },
-    ]);
+    ])
+    .select();
 
-  if (error) throw error;
+  if (error) {
+    console.error(error);
+    throw error;
+  }
+
+  return data;
+}
+
+export async function getEvents() {
+  const { data, error } = await supabase
+    .from("Events")
+    .select("*")
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    console.error(error);
+    throw error;
+  }
 
   return data;
 }
 
 export async function uploadEventImage(file: File) {
   const fileExt = file.name.split(".").pop();
-
   const fileName = `${Date.now()}.${fileExt}`;
-
-  const filePath = `events/${fileName}`;
+  const filePath = fileName;
 
   const { error } = await supabase.storage
-    .from("event-images")
+    .from("event_images")
     .upload(filePath, file);
 
-  if (error) throw error;
+  if (error) {
+    console.error("Supabase upload error:", error);
+    throw error;
+  }
 
   const { data } = supabase.storage
-    .from("event-images")
+    .from("event_images")
     .getPublicUrl(filePath);
 
   return {
