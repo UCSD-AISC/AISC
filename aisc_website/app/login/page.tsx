@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import Navbar from "@/components/Navbar/Navbar";
 import Image from "next/image";
@@ -13,6 +13,14 @@ export default function LoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const errorParam = searchParams?.get("error");
+    if (errorParam === "pending_approval") {
+      setError("Your account is pending admin approval.");
+    }
+  }, [searchParams]);
 
   const supabase = createClient();
 
@@ -22,13 +30,28 @@ export default function LoginPage() {
     setError(null);
     setMessage(null);
 
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
 
     if (error) {
       setError(error.message);
+      setLoading(false);
+      return;
+    }
+
+    // Since they logged in, verify if their profile status is 'accepted'
+    const { data: profile, error: profileError } = await supabase
+      .from("Profiles")
+      .select("status")
+      .eq("email", email)
+      .single();
+
+    if (profileError || !profile || !profile.status) {
+      // If not accepted, immediately log them back out
+      await supabase.auth.signOut();
+      setError("Your account is pending admin approval.");
     } else {
       router.push("/");
       router.refresh(); // Refresh to update navbar state
@@ -42,7 +65,7 @@ export default function LoginPage() {
     setError(null);
     setMessage(null);
 
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -53,7 +76,12 @@ export default function LoginPage() {
     if (error) {
       setError(error.message);
     } else {
-      setMessage("Check your email for the confirmation link!");
+      // Since email confirmation is turned off, Supabase logs them in automatically on signup.
+      // We sign them out immediately so they don't get access without being accepted.
+      if (data?.session) {
+        await supabase.auth.signOut();
+      }
+      setMessage("Account created! Please wait for an admin to accept your request.");
     }
     setLoading(false);
   };

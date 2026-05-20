@@ -29,10 +29,22 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const [user, setUser] = useState<User | null>(null);
+  const [isAccepted, setIsAccepted] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isToastFadingOut, setIsToastFadingOut] = useState(false);
 
   const supabase = createClient();
+  const signInTimerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Check if the user is accepted in the Profiles table
+  const checkAccepted = async (email: string) => {
+    const { data: profile } = await supabase
+      .from("Profiles")
+      .select("status")
+      .eq("email", email)
+      .single();
+    setIsAccepted(profile?.status === true);
+  };
 
   useEffect(() => {
     const showToast = (message: string) => {
@@ -44,18 +56,43 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       setUser(session?.user ?? null);
+
       if (event === 'SIGNED_IN') {
-        showToast("SUCCESSFULLY LOGGED IN");
+        // Check profile acceptance before showing anything
+        if (session?.user?.email) {
+          checkAccepted(session.user.email);
+        }
+        // Delay the toast briefly — if a SIGNED_OUT follows quickly
+        // (like during signup auto-login/logout), we cancel it
+        signInTimerRef.current = setTimeout(() => {
+          showToast("SUCCESSFULLY LOGGED IN");
+          signInTimerRef.current = null;
+        }, 1500);
       } else if (event === 'SIGNED_OUT') {
-        showToast("SUCCESSFULLY LOGGED OUT");
+        setIsAccepted(false);
+        if (signInTimerRef.current) {
+          // A SIGNED_IN just happened moments ago — this is the signup flow
+          // Cancel both toasts
+          clearTimeout(signInTimerRef.current);
+          signInTimerRef.current = null;
+        } else {
+          // This is a real, intentional logout
+          showToast("SUCCESSFULLY LOGGED OUT");
+        }
       }
     });
 
     supabase.auth.getUser().then(({ data }) => {
       setUser(data?.user ?? null);
+      if (data?.user?.email) {
+        checkAccepted(data.user.email);
+      }
     });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      subscription.unsubscribe();
+      if (signInTimerRef.current) clearTimeout(signInTimerRef.current);
+    };
   }, [supabase.auth]);
 
   const handleLogout = async () => {
@@ -154,16 +191,18 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
                 EVENTS
               </Link>
             </li>
-            <li>
-              <Link
-                href="/admin/events"
-                className={`${
-                  pathname === "/admin/events" ? "text-purple-500 dark:text-purple-400" : ""
-                } hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200`}
-              >
-                ADMIN
-              </Link>
-            </li>
+            {user && isAccepted && (
+              <li>
+                <Link
+                  href="/admin/events"
+                  className={`${
+                    pathname === "/admin/events" ? "text-purple-500 dark:text-purple-400" : ""
+                  } hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200`}
+                >
+                  ADMIN
+                </Link>
+              </li>
+            )}
             <li>
               <a
                 href="https://www.aicollective.com/"
@@ -255,6 +294,17 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
           >
             EVENTS
           </Link>
+          {user && isAccepted && (
+            <Link
+              href="/admin/events"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`${
+                pathname === "/admin/events" ? "text-purple-400" : ""
+              } hover:text-purple-400 transition-colors duration-200`}
+            >
+              ADMIN
+            </Link>
+          )}
           <a
             href="https://www.aicollective.com/"
             target="_blank"
