@@ -193,12 +193,15 @@ export default function AdminEventsLayout() {
             Event Image
           </label>
 
+          <label className="inline-block cursor-pointer bg-purple-500 hover:bg-gray-600 transition text-white px-5 py-3 rounded-xl font-semibold">
+            Choose File
           <input
             type="file"
             accept="image/*"
             onChange={handleImageChange}
-            className="w-full"
-          />
+            className="hidden"
+            />
+          </label>
 
           {formData.image && (
             <p className="mt-2 text-sm text-gray-500">
@@ -213,7 +216,7 @@ export default function AdminEventsLayout() {
         {/* SUBMIT BUTTON */}
         <button
           type="submit"
-          className="w-full bg-blue-500 hover:bg-blue-600 transition text-white py-4 rounded-xl font-bold text-lg"
+          className="w-full bg-purple-500 hover:bg-gray-600 transition text-white py-4 rounded-xl font-bold text-lg"
         >
           Create Event
         </button>
