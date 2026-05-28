@@ -8,7 +8,7 @@ export default function AboutPage() {
     <>
       <Navbar />
 
-      <main className="flex flex-col items-center px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 2xl:px-64 gap-28 mt-12">
+      <main className="flex flex-col items-center px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 2xl:px-64 gap-28 mt-12 animate-fade-in-hard">
         {/* QUOTE Section */}
         <section className="text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-purple-500 dark:text-purple-400 leading-tight max-w-5xl mx-auto">

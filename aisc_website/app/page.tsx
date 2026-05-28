@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <section className="w-full text-gray-800 dark:text-white py-24 text-center md:text-left">
+      <section className="w-full text-gray-800 dark:text-white py-24 text-center md:text-left animate-fade-in-hard">
         <div className="flex flex-col items-center justify-center px-4">
           <Image
             src="/3DCubeLogo.png"
