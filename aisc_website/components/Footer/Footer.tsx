@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="w-full px-6 md:px-20 py-10 dark:text-white flex flex-col md:flex-row justify-between items-center">
+    <footer className="max-w-400 mx-auto pt-10 dark:text-white flex flex-col md:flex-row justify-between items-center">
       {/* Left side text */}
       <p className="text-sm mb-4 md:mb-0">AISC © 2026</p>
 

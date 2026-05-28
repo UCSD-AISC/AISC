@@ -18,7 +18,7 @@ export default function Home() {
             height={400}
             className="mb-8 animate-[float_3s_ease-in-out_infinite]"
           />
-          <h1 className="text-5xl md:text-5xl font-bold tracking-widest mb-2 font-[var(--font-bai-jamjuree)]">
+          <h1 className="max-w-400 text-center text-5xl md:text-5xl font-bold tracking-widest mb-2 font-(--font-bai-jamjuree)">
             ARTIFICIAL INTELLIGENCE STUDENT COLLECTIVE
           </h1>
           <p className="text-sm md:text-base dark:text-gray-300 mb-4 font-[var(--font-bai-jamjuree)]">
@@ -31,7 +31,7 @@ export default function Home() {
       </section>
 
       <Countdown />
-      <section className="flex flex-col md:flex-row justify-between items-center text-gray-800 dark:text-white px-6 md:px-20 py-20 gap-y-12 md:gap-y-0">
+      <section className="flex flex-col max-w-400 mx-auto md:flex-row justify-between items-center text-gray-800 dark:text-white px-6 md:px-20 py-20 gap-y-12 md:gap-y-0">
         {/* Left Side Text */}
         <div className="md:w-1/2 text-lg leading-relaxed font-[var(--font-bai-jamjuree)]">
           <p>
@@ -124,13 +124,13 @@ export default function Home() {
           for students, equipping them to enter the changing workforce and
           world.
         </p>
-        <p className="italic dark:text-gray-300 text-xl font-[var(--font-bai-jamjuree)]">
+        <p className="max-w-400 mx-auto italic dark:text-gray-300 text-xl font-[var(--font-bai-jamjuree)]">
           See how we’ve been working towards that…
         </p>
       </section>
 
       <section
-        className="relative text-white px-6 md:px-20 py-32"
+        className="relative max-w-400 -mx-12 min-[1600px]:mx-auto text-white px-6 md:px-20 py-32"
         style={{
           backgroundImage: "url('/education.png')",
           backgroundSize: "cover",
@@ -153,7 +153,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="max-w-400 mx-auto">
         <Carousel />
         <div className="flex justify-center mt-8 px-4">
           <Button text="VIEW ALL EVENTS" href="/events" size="md" />

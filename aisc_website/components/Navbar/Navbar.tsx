@@ -30,8 +30,8 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
   const { textColor, bgColor } = colors[color];
 
   return (
-    <nav className="bg-transparent px-8 py-4 relative z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between text-white font-semibold tracking-wide text-[18px] w-full font-[var(--font-bai-jamjuree)]">
+    <nav className="bg-transparent relative z-50">
+      <div className="max-w-400 mx-auto flex items-center justify-between text-white font-semibold tracking-wide text-[18px] w-full font-[var(--font-bai-jamjuree)]">
         {/* Mobile Menu Button */}
         <button
           className="md:hidden"
