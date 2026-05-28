@@ -31,6 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           location: event.location,
           status: event.status,
           countdowntime: event.countdowntime,
+          img_path: event.img_path,
         },
       ])
       .select();

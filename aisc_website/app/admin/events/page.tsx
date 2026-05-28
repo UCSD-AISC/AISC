@@ -56,14 +56,14 @@ export default function AdminEventsLayout() {
         return;
       }
     }
-
+    console.log("Image URL:", imageUrl);
     const eventPayload = {
       title: formData.title,
       date: formData.date,
       location: formData.location,
       status: formData.status,
       countdowntime: formData.countdowntime,
-      imageUrl: imageUrl,
+      img_path: imageUrl,
     };
 
     try {
@@ -143,7 +143,7 @@ export default function AdminEventsLayout() {
             </label>
 
             <input
-              type="date"
+              type="text"
               name="date"
               value={formData.date}
               onChange={handleChange}
