@@ -45,7 +45,7 @@ export default function ProjectsPage() {
         <button type="button" className={`cursor-pointer active:scale-95 text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-2xl text-sm px-4 py-2.5 focus:outline-none leading-5 hover:scale-[1.1] transition ${status === "Completed" ? "bg-purple-600/90 focus:ring-4 focus:ring-purple-600/60" : ""}`} onClick={() => toggleStatus("Completed")}>Completed</button>
       </div>
       {projects.filter(card => card.status === status || status === null).length === 0 && (
-        <p className="text-center text-gray-400 py-24">No completed projects</p>
+        <p className="text-center text-gray-400 py-24 text-3xl font-semibold tracking-wide">No Completed Projects</p>
       )}
       <div key={status} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch">
         {projects.filter(card => card.status === status || status === null).map((card) => (
