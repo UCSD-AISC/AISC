@@ -41,13 +41,14 @@ const Carousel = () => {
       <div className="flex flex-col md:flex-row items-center gap-12">
         {/* Left side image card */}
         <div className={`max-w-md w-full bg-black rounded-lg overflow-hidden shadow-lg ${event.image === null && "hidden"}`}>
-          <Image
-            src={`/event_images/${event.image}`}
-            alt={`${event.title} Flyer`}
-            width={600}
-            height={400}
-            className="w-full object-cover"
-          />
+          <div className="relative w-full h-[480px]">
+            <Image
+              src={`/event_images/${event.image}`}
+              alt={`${event.title} Flyer`}
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
 
         {/* Right side content */}
