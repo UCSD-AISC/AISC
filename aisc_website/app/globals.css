@@ -49,6 +49,21 @@
   animation: fade-in 0.5s ease-out forwards;
 }
 
+@keyframes fade-out-up {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.animate-fade-out-up {
+  animation: fade-out-up 0.5s ease-in forwards;
+}
+
 .animate-fade-in-hard{
   animation: fade-in 1s ease-out forwards;
 }

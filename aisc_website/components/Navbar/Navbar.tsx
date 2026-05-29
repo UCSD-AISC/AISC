@@ -1,5 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { createClient } from "@/lib/supabase/client";
+import type { User } from "@supabase/supabase-js";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -26,6 +28,77 @@ const colors = {
 const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const [user, setUser] = useState<User | null>(null);
+  const [isAccepted, setIsAccepted] = useState(false);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [isToastFadingOut, setIsToastFadingOut] = useState(false);
+
+  const supabase = createClient();
+  const signInTimerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Check if the user is accepted in the Profiles table
+  const checkAccepted = async (email: string) => {
+    const { data: profile } = await supabase
+      .from("Profiles")
+      .select("status")
+      .eq("email", email)
+      .single();
+    setIsAccepted(profile?.status === true);
+  };
+
+  useEffect(() => {
+    const showToast = (message: string) => {
+      setToastMessage(message);
+      setIsToastFadingOut(false);
+      setTimeout(() => setIsToastFadingOut(true), 2500);
+      setTimeout(() => setToastMessage(null), 3000);
+    };
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      setUser(session?.user ?? null);
+
+      if (event === 'SIGNED_IN') {
+        // Check profile acceptance before showing anything
+        if (session?.user?.email) {
+          checkAccepted(session.user.email);
+        }
+        // Delay the toast briefly — if a SIGNED_OUT follows quickly
+        // (like during signup auto-login/logout), we cancel it
+        signInTimerRef.current = setTimeout(() => {
+          showToast("SUCCESSFULLY LOGGED IN");
+          signInTimerRef.current = null;
+        }, 1500);
+      } else if (event === 'SIGNED_OUT') {
+        setIsAccepted(false);
+        if (signInTimerRef.current) {
+          // A SIGNED_IN just happened moments ago — this is the signup flow
+          // Cancel both toasts
+          clearTimeout(signInTimerRef.current);
+          signInTimerRef.current = null;
+        } else {
+          // This is a real, intentional logout
+          showToast("SUCCESSFULLY LOGGED OUT");
+        }
+      }
+    });
+
+    supabase.auth.getUser().then(({ data }) => {
+      setUser(data?.user ?? null);
+      if (data?.user?.email) {
+        checkAccepted(data.user.email);
+      }
+    });
+
+    return () => {
+      subscription.unsubscribe();
+      if (signInTimerRef.current) clearTimeout(signInTimerRef.current);
+    };
+  }, [supabase.auth]);
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    setUser(null);
+  };
 
   const { textColor, bgColor } = colors[color];
 
@@ -118,6 +191,18 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
                 EVENTS
               </Link>
             </li>
+            {user && isAccepted && (
+              <li>
+                <Link
+                  href="/admin/events"
+                  className={`${
+                    pathname === "/admin/events" ? "text-purple-500 dark:text-purple-400" : ""
+                  } hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200`}
+                >
+                  ADMIN
+                </Link>
+              </li>
+            )}
             <li>
               <a
                 href="https://www.aicollective.com/"
@@ -132,7 +217,7 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
 
           <div className="flex-1" />
 
-          <ul className={`${textColor}`}>
+          <ul className={`${textColor} flex space-x-8 items-center`}>
             <li>
               <a
                 href="https://linktr.ee/aiscsandiego"
@@ -142,6 +227,23 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
               >
                 GET INVOLVED
               </a>
+            </li>
+            <li>
+              {user ? (
+                <button
+                  onClick={handleLogout}
+                  className="hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200 uppercase"
+                >
+                  LOGOUT
+                </button>
+              ) : (
+                <Link
+                  href="/login"
+                  className="hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-200"
+                >
+                  LOGIN
+                </Link>
+              )}
             </li>
           </ul>
         </div>
@@ -192,6 +294,17 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
           >
             EVENTS
           </Link>
+          {user && isAccepted && (
+            <Link
+              href="/admin/events"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`${
+                pathname === "/admin/events" ? "text-purple-400" : ""
+              } hover:text-purple-400 transition-colors duration-200`}
+            >
+              ADMIN
+            </Link>
+          )}
           <a
             href="https://www.aicollective.com/"
             target="_blank"
@@ -208,6 +321,37 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
           >
             GET INVOLVED
           </Link>
+          {user ? (
+            <button
+              onClick={() => {
+                handleLogout();
+                setMobileMenuOpen(false);
+              }}
+              className="text-left hover:text-purple-400 transition-colors duration-200 uppercase"
+            >
+              LOGOUT
+            </button>
+          ) : (
+            <Link
+              href="/login"
+              onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-purple-400 transition-colors duration-200 uppercase"
+            >
+              LOGIN
+            </Link>
+          )}
+        </div>
+      )}
+
+      {/* Auth Toast */}
+      {toastMessage && (
+        <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[100]">
+          <div key={isToastFadingOut ? 'fading-out' : 'fading-in'} className={`bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 shadow-2xl px-6 py-3 rounded-full flex items-center gap-3 ${isToastFadingOut ? 'animate-fade-out-up' : 'animate-fade-in-soft'}`}>
+            <div className={`w-2.5 h-2.5 rounded-full animate-pulse ${toastMessage.includes("IN") ? "bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.6)]" : "bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.6)]"}`} />
+            <span className="text-white text-sm font-semibold tracking-wide font-[var(--font-bai-jamjuree)] uppercase">
+              {toastMessage}
+            </span>
+          </div>
         </div>
       )}
     </nav>
