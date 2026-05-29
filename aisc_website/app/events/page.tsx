@@ -2,25 +2,47 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-import events from "@/lib/events.json";
 import { useState, useEffect, Fragment } from "react";
+import { getEvents } from "@/lib/admin-events";
 
 export default function EventsPage() {
   const [openCategory, setOpenCategory] = useState("");
+  const [events, setEvents] = useState<any[]>([]);
   const year = new Date().getFullYear();
   function dateParser(date: string) {
-    // Example: "date": "Thursday, January 8 | 11:00 - 2:30PM PST"
+  if (!date) {
+    const fallback = new Date();
+    return [fallback, fallback];
+  }
+
+  // Old JSON format: "Thursday, January 8 | 11:00 - 2:30PM PST"
+  if (date.includes(" | ")) {
     const split = date.split(" | ");
     const times = split[1].split(" ");
-    const startTime = new Date(split[0]+" "+year+" "+times[0]+" "+times[2].slice(-2)+" PST");
-    const endTime = new Date(split[0]+" "+year+" "+times[2].slice(0,-2)+" "+times[2].slice(-2)+" PST");
-    // Edge case where startTime is supposed to be AM (Eg: "..| 11:00 - 2:30PM PST")
+
+    const startTime = new Date(
+      split[0] + " " + year + " " + times[0] + " " + times[2].slice(-2) + " PST"
+    );
+
+    const endTime = new Date(
+      split[0] + " " + year + " " + times[2].slice(0, -2) + " " + times[2].slice(-2) + " PST"
+    );
+
     if (startTime > endTime) {
       startTime.setHours(startTime.getHours() - 12);
     }
-    return [startTime, endTime]
+
+    return [startTime, endTime];
   }
 
+  // Supabase/admin form format: "2026-05-27"
+  const startTime = new Date(date);
+  const endTime = new Date(date);
+
+  endTime.setHours(endTime.getHours() + 1);
+
+  return [startTime, endTime];
+}
   function toICSDateTime(date: Date) {
     return date
       .toISOString()
@@ -51,6 +73,19 @@ export default function EventsPage() {
 
     return icsContent.join("\r\n");
   }
+
+  useEffect(() => {
+  async function loadEvents() {
+    try {
+      const data = await getEvents();
+      setEvents(data || []);
+    } catch (error) {
+      console.error("Failed to load events:", error);
+    }
+  }
+
+  loadEvents();
+}, []);
 
   const now = new Date();
   const processedEvents = events.map((event) => {
@@ -118,8 +153,8 @@ export default function EventsPage() {
             <Fragment key={category}>
               <div>
                 <h2
-                  onClick={() => setOpenCategory(category)}
-                  className={`cursor-pointer text-5xl md:text-6xl font-bold font-[var(--font-bai-jamjuree)] ${
+                  onClick={() => setOpenCategory(openCategory === category ? "" : category)}
+                  className={`cursor-pointer text-5xl md:text-6xl font-bold font-[var(--font-bai-jamjuree] ${
                     openCategory === category
                       ? "text-[#00add4] dark:text-[#00BCD4]"
                       : "text-black/25 dark:text-white/40"
@@ -141,7 +176,7 @@ export default function EventsPage() {
                       >
                         <div
                           className={`flex-1 text-gray-800 dark:text-white ${
-                            event.image === null ? "max-w-4xl mt-15 mb-15" : "max-w-xl"
+                            !event.img_path ? "max-w-4xl mt-15 mb-15" : "max-w-xl"
                           } ${
                             !isEven ? "md:text-right md:ml-16" : "md:mr-16"
                           }`}
@@ -168,15 +203,17 @@ export default function EventsPage() {
                             </a>
                           )}
                         </div>
-                        <div className={`flex-1 w-full max-w-md group overflow-hidden ${event.image === null && "hidden"}`}>
-                          <Image
-                            src={`/event_images/${event.image}`}
-                            alt={event.title}
-                            width={600}
-                            height={400}
-                            className="rounded-lg object-cover w-full h-auto transform transition-transform duration-500 group-hover:scale-105"
-                          />
-                        </div>
+                        {event.img_path && (
+  <div className="flex-1 w-full max-w-md group overflow-hidden">
+    <Image
+      src={event.img_path}
+      alt={event.title}
+      width={600}
+      height={400}
+      className="rounded-lg object-cover w-full h-auto transform transition-transform duration-500 group-hover:scale-105"
+    />
+  </div>
+)}
                       </div>
                     );
                   })}

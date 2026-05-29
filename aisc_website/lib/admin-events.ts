@@ -7,7 +7,7 @@ export type EventData = {
   location: string;
   status: string;
   countdowntime: string;
-  imageUrl?: string;
+  img_path?: string;
 };
 
 export async function createEvent(event: EventData) {
@@ -20,6 +20,7 @@ export async function createEvent(event: EventData) {
         location: event.location,
         status: event.status,
         countdowntime: event.countdowntime,
+        img_path: event.img_path,
       },
     ])
     .select();
