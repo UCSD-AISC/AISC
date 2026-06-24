@@ -28,7 +28,7 @@ This site is built with:
 
 This is an evolving project! Whether you're a designer, developer, or community member with ideas, we welcome your input. Pull requests are welcome.
 
-## 🧠 Developers
+## Developers
 
 Built with love by  
 **Sadrac Santacruz (Current President)** & **Rohan Sachdeva (Current Projects Director)**
@@ -38,8 +38,15 @@ We are proud members of the AIC community and believe in using technology to emp
 ## Contact
 
 Interested in partnering or contributing?  
-Visit [aicollective.com](https://www.aicollective.com/) to learn more.
+Visit the [aicollective.com](https://www.aicollective.com/) to learn more.
+
+## Socials
+
+[Instagram](https://www.instagram.com/aiscsandiego/)
+[Discord](https://discord.gg/yTqNh2YGB)
+[LinkedIn](https://www.linkedin.com/company/ai-collective-at-uc-san-diego/)
+[Linktr.ee](https://linktr.ee/aicucsd)
 
 ---
 
-> “The best way to predict the future is to invent it.” – Alan Kay
+> “Building the Human Layer for the AI era"
