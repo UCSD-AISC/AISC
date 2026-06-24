@@ -1,4 +1,4 @@
-# AIC @ UC San Diego — Artificial Intelligence Collective
+# The AI Collective @ UC San Diego
 
 Welcome to the official website for AIC @ UCSD, a student-led organization driven by the mission to make **AI literacy accessible for everyone**. This project represents our passion, purpose, and people—designed to inform, inspire, and engage a national community of learners, builders, and changemakers.
 
