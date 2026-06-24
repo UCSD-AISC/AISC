@@ -42,10 +42,10 @@ Visit the [aicollective.com](https://www.aicollective.com/) to learn more.
 
 ## Socials
 
-[Instagram](https://www.instagram.com/aiscsandiego/)
-[Discord](https://discord.gg/yTqNh2YGB)
-[LinkedIn](https://www.linkedin.com/company/ai-collective-at-uc-san-diego/)
-[Linktr.ee](https://linktr.ee/aicucsd)
+[Instagram](https://www.instagram.com/aiscsandiego/) || 
+[Discord](https://discord.gg/yTqNh2YGB) || 
+[LinkedIn](https://www.linkedin.com/company/ai-collective-at-uc-san-diego/) || 
+[Linktr.ee](https://linktr.ee/aicucsd) 
 
 ---
 
