@@ -1,10 +1,10 @@
-# AISC @ UC San Diego — Artificial Intelligence Student Collective
+# AIC @ UC San Diego — Artificial Intelligence Collective
 
-Welcome to the official website for AISC @ UCSD, a student-led organization driven by the mission to make **AI literacy accessible for everyone**. This project represents our passion, purpose, and people—designed to inform, inspire, and engage a national community of learners, builders, and changemakers.
+Welcome to the official website for AIC @ UCSD, a student-led organization driven by the mission to make **AI literacy accessible for everyone**. This project represents our passion, purpose, and people—designed to inform, inspire, and engage a national community of learners, builders, and changemakers.
 
 ## Our Mission
 
-Artificial Intelligence is transforming every part of our lives—from healthcare and education to ethics and creativity. At AISC, we believe that **AI shouldn't be exclusive**. Everyone should have the tools, knowledge, and community to participate in shaping the future of this powerful technology.
+Artificial Intelligence is transforming every part of our lives—from healthcare and education to ethics and creativity. At AIC, we believe that **AI shouldn't be exclusive**. Everyone should have the tools, knowledge, and community to participate in shaping the future of this powerful technology.
 
 ## About the Website
 
@@ -33,12 +33,12 @@ This is an evolving project! Whether you're a designer, developer, or community 
 Built with love by  
 **Sadrac Santacruz (Current President)** & **Rohan Sachdeva (Current Projects Director)**
 
-We are proud members of the AISC community and believe in using technology to empower, educate, and connect.
+We are proud members of the AIC community and believe in using technology to empower, educate, and connect.
 
 ## Contact
 
-Interested in partnering, contributing, or learning more?  
-Visit [humansforai.com/aisc](https://humansforai.com/aisc) or reach out at `contact@aisc.com`.
+Interested in partnering or contributing?  
+Visit [aicollective.com](https://www.aicollective.com/) to learn more.
 
 ---
 
