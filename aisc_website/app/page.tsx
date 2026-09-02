@@ -31,7 +31,7 @@ export default function Home() {
       </section>
 
       <Countdown />
-      <section className="flex flex-col max-w-400 mx-auto md:flex-row justify-between items-center text-gray-800 dark:text-white px-6 md:px-20 py-20 gap-y-12 md:gap-y-0">
+      <section className="flex flex-col gap-8 max-w-400 mx-auto md:flex-row justify-between items-center text-gray-800 dark:text-white px-6 md:px-20 py-20 gap-y-12 md:gap-y-0">
         {/* Left Side Text */}
         <div className="md:w-1/2 text-lg leading-relaxed font-[var(--font-bai-jamjuree)]">
           <p>

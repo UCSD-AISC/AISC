@@ -34,7 +34,7 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
       <div className="max-w-400 mx-auto flex items-center justify-between text-white font-semibold tracking-wide text-[18px] w-full font-[var(--font-bai-jamjuree)]">
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden"
+          className="min-[840px]:hidden"
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
         >
           <div className="space-y-1">
@@ -45,10 +45,10 @@ const Navbar: React.FC<NavbarProps> = ({color = "default"}) => {
         </button>
 
         {/* Logo or Title */}
-        <span className={`md:hidden text-lg font-bold ${textColor}`}>AISC @ UCSD</span>
+        <span className={`min-[840px]:hidden text-lg font-bold ${textColor}`}>AISC @ UCSD</span>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center w-full">
+        <div className="hidden min-[840px]:flex items-center w-full">
           <Link href="/" className="relative w-16 h-16 group mr-8">
             {pathname === "/" ? (
               <Image
